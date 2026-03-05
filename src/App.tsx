@@ -167,7 +167,7 @@ function RightForYou() {
     <section className="bg-dark py-20 px-6">
       <div className="max-w-page mx-auto">
         <div className="mb-6">
-          <div className="w-12 h-12 bg-orange flex items-center justify-center" style={{ clipPath: 'polygon(0 0, 100% 0, 50% 100%)' }} />
+          <img src="/images/substack-logo.svg" alt="" className="w-12 h-12" />
         </div>
         <p className="font-sans text-[12px] font-bold text-orange uppercase tracking-[0.15em] mb-3">Is This Right For You?</p>
         <h2 className="font-serif text-[clamp(30px,4vw,44px)] text-cream leading-[1.15] mb-10">
