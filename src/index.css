@@ -4,4 +4,15 @@
 
 * { margin: 0; padding: 0; box-sizing: border-box; }
 body { font-family: 'Inter', system-ui, sans-serif; background: #f8f4e9; color: #1a1a1a; }
-.bg-cream { background-color: #f8f4e9; background-image: url('/images/paper-texture.png'); background-size: 800px; }
+main { position: relative; }
+main::after {
+  content: '';
+  position: fixed;
+  inset: 0;
+  background-image: url('/images/paper-texture.png');
+  background-size: 800px;
+  pointer-events: none;
+  z-index: 50;
+  opacity: 0.4;
+  mix-blend-mode: multiply;
+}
