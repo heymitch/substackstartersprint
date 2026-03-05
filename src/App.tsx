@@ -164,12 +164,12 @@ function RightForYou() {
   ]
 
   return (
-    <section className="bg-dark py-20 px-6">
+    <section className="bg-dark pt-0 pb-20 px-6">
       <div className="max-w-page mx-auto">
-        <div className="mb-6">
+        <div className="-mt-6">
           <img src="/images/substack-logo.svg" alt="" className="w-12 h-12" />
         </div>
-        <p className="font-sans text-[12px] font-bold text-orange uppercase tracking-[0.15em] mb-3">Is This Right For You?</p>
+        <p className="font-sans text-[12px] font-bold text-orange uppercase tracking-[0.15em] mt-6 mb-3">Is This Right For You?</p>
         <h2 className="font-serif text-[clamp(30px,4vw,44px)] text-cream leading-[1.15] mb-10">
           Hmm...let's see...
         </h2>
