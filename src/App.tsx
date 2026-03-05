@@ -86,13 +86,13 @@ function Hero() {
         {/* Right column — headshots */}
         <div className="flex-1 flex gap-4 justify-center md:justify-end">
           <div className="flex flex-col items-center gap-2">
-            <div className="w-[200px] h-[240px] bg-yellow rounded overflow-hidden">
+            <div className="w-[200px] h-[260px] rounded overflow-hidden">
               <img src="/images/dickie.png" alt="Dickie Bush" className="w-full h-full object-cover object-top" />
             </div>
             <span className="font-sans text-[14px] font-medium">Dickie Bush</span>
           </div>
           <div className="flex flex-col items-center gap-2">
-            <div className="w-[200px] h-[240px] bg-yellow rounded overflow-hidden">
+            <div className="w-[200px] h-[260px] rounded overflow-hidden">
               <img src="/images/cole.png" alt="Nicolas Cole" className="w-full h-full object-cover object-top" />
             </div>
             <span className="font-sans text-[14px] font-medium">Nicolas Cole</span>
@@ -307,7 +307,7 @@ function Instructors() {
         <div className="space-y-4 mb-12">
           <div className="bg-dark-deep text-cream rounded-xl p-6 flex flex-col md:flex-row gap-6 items-center">
             <div className="w-20 h-20 rounded-full flex-shrink-0 overflow-hidden">
-              <img src="/images/cole-small.png" alt="Nicolas Cole" className="w-full h-full object-cover object-top" />
+              <img src="/images/cole.png" alt="Nicolas Cole" className="w-full h-full object-cover object-top" />
             </div>
             <div>
               <h4 className="font-serif text-[18px] font-bold text-cream mb-2">Nicolas Cole</h4>
@@ -320,7 +320,7 @@ function Instructors() {
           </div>
           <div className="bg-dark-deep text-cream rounded-xl p-6 flex flex-col md:flex-row gap-6 items-center">
             <div className="w-20 h-20 rounded-full flex-shrink-0 overflow-hidden">
-              <img src="/images/dickie-small.png" alt="Dickie Bush" className="w-full h-full object-cover object-top" />
+              <img src="/images/dickie.png" alt="Dickie Bush" className="w-full h-full object-cover object-top" />
             </div>
             <div>
               <h4 className="font-serif text-[18px] font-bold text-cream mb-2">Dickie Bush</h4>
