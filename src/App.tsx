@@ -26,13 +26,9 @@ function FadeIn({ children, className = '', delay = 0 }: { children: React.React
   )
 }
 
-/* ─── Substack Logo SVG ─── */
+/* ─── Substack Logo ─── */
 function SubstackLogo({ className = '' }: { className?: string }) {
-  return (
-    <svg className={className} viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-      <path d="M22.539 8.242H1.46V5.406h21.08v2.836zM1.46 10.812V24L12 18.11 22.54 24V10.812H1.46zM22.54 0H1.46v2.836h21.08V0z" />
-    </svg>
-  )
+  return <img src="/images/substack-logo.svg" alt="Substack" className={className} />
 }
 
 /* ─── Section 1: Hero ─── */
@@ -52,7 +48,7 @@ function Hero() {
       {/* Logo + Title */}
       <div className="text-center pb-4">
         <div className="flex items-center justify-center gap-2 mb-2">
-          <SubstackLogo className="w-6 h-6 text-orange" />
+          <SubstackLogo className="w-7 h-7" />
           <span className="font-sans text-[14px] font-bold text-orange tracking-wider uppercase">substack</span>
         </div>
         <h1 className="font-display text-[clamp(48px,7vw,80px)] font-black leading-[0.95] tracking-tight uppercase">
@@ -221,10 +217,11 @@ function Sessions() {
         <div className="space-y-0 divide-y divide-black/10">
           {sessions.map((s) => (
             <div key={s.num} className="py-6 flex flex-col md:flex-row gap-4 md:gap-8">
-              <div className="md:w-[100px] flex-shrink-0">
-                <span className="font-sans text-[11px] font-bold text-orange uppercase tracking-wider">Session {s.num}</span>
+              <div className="md:w-[80px] flex-shrink-0">
+                <img src={`/images/session-${s.num}.png`} alt={`Session ${s.num}`} className="w-16 h-16 rounded-lg object-cover" />
               </div>
               <div className="flex-1">
+                <span className="font-sans text-[11px] font-bold text-orange uppercase tracking-wider">Session {s.num}</span>
                 <h3 className="font-serif text-[clamp(18px,2vw,22px)] font-bold leading-[1.3] mb-2">{s.title}</h3>
                 <p className="font-sans text-[14px] text-black/60 leading-relaxed mb-2">{s.desc}</p>
                 <p className="font-sans text-[13px] text-black/50">
@@ -273,9 +270,7 @@ function Bonuses() {
           {bonuses.map((b) => (
             <div key={b.num} className="bg-cream/5 border border-white/10 rounded-lg p-6">
               <div className="flex items-center gap-4 mb-4">
-                <div className="w-14 h-14 bg-dark-deep border border-white/20 rounded-lg flex items-center justify-center">
-                  <span className="text-orange text-[20px] font-bold">#{b.num}</span>
-                </div>
+                <img src={`/images/bonus-${b.num}.png`} alt={b.title} className="w-16 h-20 object-contain flex-shrink-0" />
                 <div>
                   <span className="font-sans text-[11px] font-bold text-orange uppercase tracking-wider">Bonus #{b.num}</span>
                   <h3 className="font-serif text-[20px] font-bold text-cream">{b.title}</h3>
@@ -310,23 +305,29 @@ function Instructors() {
         </h2>
 
         <div className="space-y-4 mb-12">
-          <div className="bg-dark-deep text-cream rounded-xl p-6 flex flex-col md:flex-row gap-6">
-            <div className="w-20 h-20 bg-white rounded-full flex-shrink-0 overflow-hidden">
-              <img src="/images/cole.png" alt="Nicolas Cole" className="w-full h-full object-cover" />
+          <div className="bg-dark-deep text-cream rounded-xl p-6 flex flex-col md:flex-row gap-6 items-center">
+            <div className="w-20 h-20 rounded-full flex-shrink-0 overflow-hidden">
+              <img src="/images/cole-small.png" alt="Nicolas Cole" className="w-full h-full object-cover object-top" />
             </div>
-            <p className="font-sans text-[14px] text-white/70 leading-relaxed">
-              Author of the best-selling book <em>The Art & Business of Online Writing</em>.
-              Founder of the first ghostwriting agency for Silicon Valley founders & executives.
-              10+ years writing online. 400+ columns for Inc Magazine.
-            </p>
+            <div>
+              <h4 className="font-serif text-[18px] font-bold text-cream mb-2">Nicolas Cole</h4>
+              <p className="font-sans text-[14px] text-white/70 leading-relaxed">
+                Author of the best-selling book <em>The Art & Business of Online Writing</em>.
+                Founder of the first ghostwriting agency for Silicon Valley founders & executives.
+                10+ years writing online. 400+ columns for Inc Magazine.
+              </p>
+            </div>
           </div>
-          <div className="bg-dark-deep text-cream rounded-xl p-6 flex flex-col md:flex-row gap-6">
-            <div className="w-20 h-20 bg-white rounded-full flex-shrink-0 overflow-hidden">
-              <img src="/images/dickie.png" alt="Dickie Bush" className="w-full h-full object-cover" />
+          <div className="bg-dark-deep text-cream rounded-xl p-6 flex flex-col md:flex-row gap-6 items-center">
+            <div className="w-20 h-20 rounded-full flex-shrink-0 overflow-hidden">
+              <img src="/images/dickie-small.png" alt="Dickie Bush" className="w-full h-full object-cover object-top" />
             </div>
-            <p className="font-sans text-[14px] text-white/70 leading-relaxed">
-              Former Wall Street trader at BlackRock turned Digital Writer & Digital Entrepreneur. Creator of Ship 30 for 30 — the fastest-growing cohort-based writing program on the internet.
-            </p>
+            <div>
+              <h4 className="font-serif text-[18px] font-bold text-cream mb-2">Dickie Bush</h4>
+              <p className="font-sans text-[14px] text-white/70 leading-relaxed">
+                Former Wall Street trader at BlackRock turned Digital Writer & Digital Entrepreneur. Creator of Ship 30 for 30 — the fastest-growing cohort-based writing program on the internet.
+              </p>
+            </div>
           </div>
         </div>
 
