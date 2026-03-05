@@ -34,7 +34,7 @@ function SubstackLogo({ className = '' }: { className?: string }) {
 /* ─── Section 1: Hero ─── */
 function Hero() {
   return (
-    <section className="bg-cream border-[6px] border-orange">
+    <section className="bg-cream border-[12px] border-orange">
       {/* Top badge */}
       <div className="flex justify-center pt-6 pb-4">
         <div className="flex items-center gap-2 bg-black text-white px-5 py-2.5 rounded-full">
@@ -113,7 +113,7 @@ function HowItWorks() {
   ]
 
   return (
-    <section id="how-it-works" className="bg-cream border-x-[6px] border-orange py-16 px-6">
+    <section id="how-it-works" className="bg-cream border-x-[12px] border-orange py-16 px-6">
       <div className="max-w-page mx-auto">
         <p className="font-sans text-[12px] font-bold text-orange uppercase tracking-[0.15em] mb-3">How It Works</p>
         <h2 className="font-serif text-[clamp(30px,4vw,44px)] leading-[1.15] mb-3">
