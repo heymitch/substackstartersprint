@@ -55,7 +55,7 @@ function Hero() {
           <SubstackLogo className="w-6 h-6 text-orange" />
           <span className="font-sans text-[14px] font-bold text-orange tracking-wider uppercase">substack</span>
         </div>
-        <h1 className="font-serif text-[clamp(48px,7vw,80px)] font-black leading-[0.95] tracking-tight uppercase">
+        <h1 className="font-display text-[clamp(48px,7vw,80px)] font-black leading-[0.95] tracking-tight uppercase">
           Starter Sprint
         </h1>
       </div>

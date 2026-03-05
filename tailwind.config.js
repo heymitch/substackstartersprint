@@ -9,14 +9,14 @@ export default {
         'dark-deep': '#1c2220',
         orange: '#f35a1f',
         yellow: '#ffe27a',
-        'yellow-photo': '#ffe27a',
       },
       fontFamily: {
-        serif: ['"Source Serif 4"', 'Georgia', 'serif'],
+        display: ['Montserrat', 'sans-serif'],
+        serif: ['Georgia', 'serif'],
         sans: ['Inter', 'system-ui', 'sans-serif'],
       },
       maxWidth: {
-        page: '1100px',
+        page: '960px',
       },
     },
   },
