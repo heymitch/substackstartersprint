@@ -1,7 +1,7 @@
 import './index.css'
 import { useState, useEffect, useRef } from 'react'
 
-const CTA_URL = '#'
+const CTA_URL = 'https://ship.samcart.com/products/substack-starter-sprint'
 
 /* ─── Fade-up on scroll ─── */
 function FadeIn({ children, className = '', delay = 0 }: { children: React.ReactNode; className?: string; delay?: number }) {
@@ -67,14 +67,14 @@ function Hero() {
             <strong>newsletter  in 14 days.</strong>
           </h2>
           <p className="font-sans text-[15px] text-black/70 leading-relaxed mb-2">
-            8 live sessions. Built together — with the founders of the internet's most successful writing businesses.
+            6 live sessions. Built together — with the founders of the internet's most successful writing businesses.
           </p>
           <p className="font-sans text-[15px] text-black/70 leading-relaxed mb-8">
             This isn't self-paced content you buy and forget.
             You show up, you do the work, you leave with a newsletter — and the replays forever.
           </p>
 
-          <a href={CTA_URL} className="inline-block bg-black text-white font-sans text-[14px] font-bold uppercase tracking-[0.1em] px-10 py-4 hover:bg-black/85 transition">
+          <a href="#how-it-works" className="inline-block bg-black text-white font-sans text-[14px] font-bold uppercase tracking-[0.1em] px-10 py-4 hover:bg-black/85 transition">
             How It Works
           </a>
 
@@ -106,14 +106,14 @@ function Hero() {
 /* ─── Section 2: How It Works ─── */
 function HowItWorks() {
   const stats = [
-    { num: '8', label: 'Live Sessions', desc: '4 per week over 2 weeks. 60 minutes each.\nAll held at 3:00 PM ET.' },
+    { num: '6', label: 'Live Sessions', desc: '3 per week over 2 weeks. 60 minutes each.\nAll held at 3:00 PM ET.' },
     { num: '14', label: 'Days to Launch', desc: 'From blank page to\npositioned, monetized,\nand running newsletter\nin two weeks.' },
     { num: '∞', label: 'Lifetime Access', desc: 'All replays, slides,\ntemplates, .Skills, and\nbonuses yours to\nkeep forever.' },
     { num: '2', label: 'World-Class\nInstructors', desc: 'Dickie Bush and Nicolas\nCole, the people\nbehind the internet\'s\nbiggest writing\nbusinesses.' },
   ]
 
   return (
-    <section className="bg-cream border-x-[6px] border-orange py-16 px-6">
+    <section id="how-it-works" className="bg-cream border-x-[6px] border-orange py-16 px-6">
       <div className="max-w-page mx-auto">
         <p className="font-sans text-[12px] font-bold text-orange uppercase tracking-[0.15em] mb-3">How It Works</p>
         <h2 className="font-serif text-[clamp(30px,4vw,44px)] leading-[1.15] mb-3">
@@ -155,7 +155,7 @@ function RightForYou() {
     },
     {
       q: 'Do you have a <em>free newsletter</em> but want to go paid?',
-      a: "You've built a list but haven't made the jump. You're not sure what to put behind the paywall, how to price it, or how to pitch it. Sessions 4 and 8 were built specifically for this moment.",
+      a: "You've built a list but haven't made the jump. You're not sure what to put behind the paywall, how to price it, or how to pitch it. Sessions 4 and 6 were built specifically for this moment.",
     },
     {
       q: 'Do you have a paid newsletter but want <em>more revenue?</em>',
@@ -193,20 +193,18 @@ function RightForYou() {
 /* ─── Section 4: Sessions / What You'll Build ─── */
 function Sessions() {
   const sessions = [
-    { num: 1, title: 'Category Newsletter Positioning', desc: 'The key framework behind a $1 million newsletter. Establish your newsletter as a category within your industry — then own your market.', skill: 'Your newsletter name, positioning, and 5-star elevator pitch.' },
-    { num: 2, title: 'Irresistible Newsletter Offer Stack', desc: 'A premium feel that says "this is worth it." Cohesive visual brand, and your Notes Page editor and appearance.', skill: 'A killer welcome, the About Page, and a subscriber offer stack that converts.' },
-    { num: 3, title: 'Writing Your Onboarding Sequence for Free Readers', desc: "A multi-note sequence that takes readers on your newsletter's journey. Welcome, educate, and deliver value.", skill: 'An automated onboarding sequence running for every new free subscriber.' },
-    { num: 4, title: 'Creating a Bonus Educational Email Course for Paid Readers', desc: 'The fastest way to make a new subscriber worth their upgrade. A FREE Educational Email course delivered automatically.', skill: 'A full paid subscriber onboarding sequence (Paid Education newsletter).' },
-    { num: 5, title: 'Newsletter Copywriting Secrets', desc: "The 240-page Playbook. An Entire Research Playbook, and the Copywriting system we've developed from 10,000+ pieces of digital writing.", skill: 'A repeatable content strategy for your ongoing newsletter.' },
-    { num: 6, title: 'Newsletter Writing With Claude Cowork', desc: "Use AI to accelerate (not automate) your newsletter's writing. Write better, faster, without sounding like a robot.", skill: 'A fully configured, personalized newsletter writing .Skill.' },
-    { num: 7, title: 'Building Your Notes Traffic Strategy', desc: "Use free Substack's tools to drive signups on auto-pilot. Turning forever, 1000s of posts, and your traffic strategy blueprint.", skill: 'A 20-day Notes content calendar and your traffic strategy blueprint.' },
-    { num: 8, title: 'Substack Monetization Mastery', desc: "Turn free newsletter readers to paid. After subscribers first read your free posts, show them what they're missing.", skill: 'A figure monetization plan.' },
+    { num: 1, img: 'session-1.png', title: 'Category Newsletter Positioning', desc: "Pick a category, name it, and claim it before you write a word. You'll nail the credibility angle that makes readers say 'this is exactly what I've been looking for.'", skill: 'Your newsletter name, subtitle, and a positioning statement that owns your niche.' },
+    { num: 2, img: 'session-2.png', title: 'Irresistible Newsletter Offer Stack', desc: "Every subscriber needs a reason to sign up and a reason to pay. The offer stack you build here gives them both: instant free bonuses, a paid upgrade path, and a subscriber value ladder that starts converting immediately.", skill: 'A complete free and paid offer stack live on your Substack.' },
+    { num: 3, img: 'session-3.png', title: 'Substack Tech Stack', desc: "Set up Substack for revenue from the start. Paid tiers, your About page, and the automated welcome sequence that turns every new free subscriber into a warm lead before your next post lands.", skill: 'A fully configured Substack, paid setup live, and your welcome sequence running automatically.' },
+    { num: 4, img: 'session-5.png', title: 'Newsletter Conversion Secrets', desc: "Free subscribers don't convert on their own. In this session, we'll give you the copywriting and paywall strategy that makes going paid feel like the obvious next move for your readers.", skill: 'A paywall strategy and paid subscriber plan ready before your first upgrade arrives.' },
+    { num: 5, img: 'session-7.png', title: 'Substack Notes Traffic Strategy', desc: "Notes is the fastest organic growth lever on Substack. Build a strategy that pulls new subscribers from Substack's own discovery feed every week.", skill: 'A Notes traffic strategy and a 30-day content calendar ready to publish.' },
+    { num: 6, img: 'session-6.png', title: 'Substack Monetization Mastery', desc: "Map every revenue lever your newsletter has: paid tiers, a founding member window, and product launches sold to a list you own. Then build a Claude Cowork .Skill trained on your writing so the newsletter that used to take 3 hours takes 45 minutes.", skill: 'A monetization plan and a custom AI writing tool trained on your voice.' },
   ]
 
   return (
     <section className="bg-cream py-20 px-6">
       <div className="max-w-page mx-auto">
-        <p className="font-sans text-[12px] font-bold text-orange uppercase tracking-[0.15em] mb-3">The 8 Sessions</p>
+        <p className="font-sans text-[12px] font-bold text-orange uppercase tracking-[0.15em] mb-3">The 6 Sessions</p>
         <h2 className="font-serif text-[clamp(30px,4vw,44px)] leading-[1.15] mb-3">
           Here's what you'll build.
         </h2>
@@ -218,7 +216,7 @@ function Sessions() {
           {sessions.map((s) => (
             <div key={s.num} className="py-6 flex flex-col md:flex-row gap-4 md:gap-8">
               <div className="md:w-[80px] flex-shrink-0">
-                <img src={`/images/session-${s.num}.png`} alt={`Session ${s.num}`} className="w-16 h-16 rounded-lg object-cover" />
+                <img src={`/images/${s.img}`} alt={`Session ${s.num}`} className="w-16 h-16 rounded-lg object-cover" />
               </div>
               <div className="flex-1">
                 <span className="font-sans text-[11px] font-bold text-orange uppercase tracking-wider">Session {s.num}</span>
@@ -376,12 +374,8 @@ function Pricing() {
         </div>
 
         <div className="max-w-[400px] mx-auto">
-          <p className="font-sans text-[14px] text-black/60 mb-2">
-            Or 2 payments of $420<br />
-            Founding member / prior bootcamp rate: $600
-          </p>
           <p className="font-sans text-[12px] text-black/40 mt-4">
-            Cart opens March 9 · Cart closes March 15 · Kickoff Monday March 16 · Limited seats
+            6 live sessions · Cart opens March 9 · Cart closes March 15 · Kickoff Monday March 16 · Limited seats
           </p>
         </div>
       </div>
@@ -423,10 +417,10 @@ function ReadyToBuild() {
 /* ─── Section 9: FAQ ─── */
 function FAQ() {
   const faqs = [
-    { q: "How much time do I need per week?", a: "Four 60-minute live sessions per week, plus 1–2 hours to implement between sessions. Intensive but doable — every deliverable is built during the session itself, so implementation time is minimal." },
+    { q: "How much time do I need per week?", a: "Three 60-minute live sessions per week, plus 1–2 hours to implement between sessions. Intensive but doable — every deliverable is built during the session itself, so implementation time is minimal." },
     { q: "What if I can't attend live?", a: "Every session is recorded and the replay goes up quickly after the live ends. You'll also get the full slide deck. Showing up live is where the real value is — real-time Q&A can't be replicated in a replay." },
     { q: "Do I need writing experience?", a: "Not at all. The sprint starts from zero — how to position your newsletter, how to set it up technically, how to write your first content. No experience required." },
-    { q: "I already have a newsletter. Is this still for me?", a: "Yes — especially Sessions 2, 4, 5, 7, and 8. If your newsletter isn't growing or converting to paid the way you want, the issue is almost always positioning, offer stack, or monetization architecture." },
+    { q: "I already have a newsletter. Is this still for me?", a: "Yes — especially Sessions 2, 4, 5, and 6. If your newsletter isn't growing or converting to paid the way you want, the issue is almost always positioning, offer stack, or monetization architecture." },
     { q: "How is this different from Category Newsletter Creator?", a: "Category Newsletter Creator is a self-paced digital product. The Substack Starter Sprint is a live cohort where you build everything in real time with Dickie and Nicolas. Different format, much higher accountability." },
     { q: "How is this different from Ship 30 for 30?", a: "Ship 30 teaches you how to write and publish on social platforms. The sprint teaches you how to move that audience to email and monetize it. They're complementary — Ship 30 builds your voice, the sprint builds your newsletter business." },
     { q: "Can't I just learn this for free?", a: "You can — and if you haven't started yet, the answer is clearly no. Free content gives you information, not accountability or a build environment. The sprint compresses 6+ months of trial and error into 14 days." },
