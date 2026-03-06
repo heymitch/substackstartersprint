@@ -408,7 +408,7 @@ function Pricing({ ctaUrl }: { ctaUrl: string }) {
       <div className="max-w-page mx-auto text-center">
         <p className="font-sans text-[12px] font-bold text-orange uppercase tracking-[0.15em] mb-4">Join the Bootcamp</p>
         <h2 className="font-serif text-[clamp(30px,4vw,44px)] leading-[1.15] mb-4">
-          Proven Frameworks.<br />Everything You Need to Launch.
+          Proven Frameworks.<br />Everything You Need to Launch and Grow.
         </h2>
         <p className="font-sans text-[16px] text-black/70 mb-10">
           Built from newsletters that have generated $1M in paid subscriptions.
