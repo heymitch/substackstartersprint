@@ -179,18 +179,20 @@ function RightForYou() {
 /* ─── Section 4: Sessions / What You'll Build ─── */
 function Sessions() {
   const sessions = [
-    { num: 1, img: 'session-1.png', title: 'Category Newsletter Positioning', desc: "Pick a category, name it, and claim it before you write a word. You'll nail the credibility angle that makes readers say 'this is exactly what I've been looking for.'", skill: 'Your newsletter name, subtitle, and a positioning statement that owns your niche.' },
-    { num: 2, img: 'session-2.png', title: 'Irresistible Newsletter Offer Stack', desc: "Every subscriber needs a reason to sign up and a reason to pay. The offer stack you build here gives them both: instant free bonuses, a paid upgrade path, and a subscriber value ladder that starts converting immediately.", skill: 'A complete free and paid offer stack live on your Substack.' },
-    { num: 3, img: 'session-3.png', title: 'Substack Tech Stack', desc: "Set up Substack for revenue from the start. Paid tiers, your About page, and the automated welcome sequence that turns every new free subscriber into a warm lead before your next post lands.", skill: 'A fully configured Substack, paid setup live, and your welcome sequence running automatically.' },
-    { num: 4, img: 'session-5.png', title: 'Newsletter Conversion Secrets', desc: "Free subscribers don't convert on their own. In this session, we'll give you the copywriting and paywall strategy that makes going paid feel like the obvious next move for your readers.", skill: 'A paywall strategy and paid subscriber plan ready before your first upgrade arrives.' },
-    { num: 5, img: 'session-7.png', title: 'Substack Notes Traffic Strategy', desc: "Notes is the fastest organic growth lever on Substack. Build a strategy that pulls new subscribers from Substack's own discovery feed every week.", skill: 'A Notes traffic strategy and a 30-day content calendar ready to publish.' },
-    { num: 6, img: 'session-6.png', title: 'Substack Monetization Mastery', desc: "Map every revenue lever your newsletter has: paid tiers, a founding member window, and product launches sold to a list you own. Then build a Claude Cowork .Skill trained on your writing so the newsletter that used to take 3 hours takes 45 minutes.", skill: 'A monetization plan and a custom AI writing tool trained on your voice.' },
+    { num: 1, img: 'session-1.png', title: 'Category Newsletter Positioning', desc: "The most important decision you'll make. Establish your credibility anchor, define your recurring offer, and nail your Category Title and Actionable Subtitle.", skill: 'Your newsletter name, positioning, and 1-liner — done.' },
+    { num: 2, img: 'session-2.png', title: 'Irresistible Newsletter Offer Stack', desc: "A newsletter isn't just content — it's an offer. Publishing cadences, Instant Bonus Unlocks, and your About Page written and published live.", skill: 'A fully written, live About Page and a subscriber offer stack that converts.' },
+    { num: 3, img: 'session-3.png', title: 'Writing Your Onboarding Sequence for Free Readers', desc: "A multi-email sequence that sells readers on your newsletter, introduces you, delivers any promised bonuses, and drives them toward your paid offer — written and live.", skill: 'An automated onboarding sequence running for every new free subscriber.' },
+    { num: 4, img: 'session-4.png', title: 'Creating a Bonus Educational Email Course for Paid Readers', desc: "The fastest way to reduce churn is to immediately reward the upgrade. A Paid Educational Email Course that makes paid subscribers feel like they made the right decision from Day 1.", skill: 'A live paid subscriber onboarding sequence that increases retention.' },
+    { num: 5, img: 'session-5.png', title: 'Newsletter Copywriting Secrets', desc: "The Cliffhanger Paywall, the Bonus Resource Paywall, and the free/paid cadence that maximizes reader engagement and paid conversion simultaneously.", skill: 'A repeatable content strategy for your ongoing newsletter.' },
+    { num: 6, img: 'session-6.png', title: 'Newsletter Writing With Claude Cowork', desc: "Build a newsletter writing .Skill inside Claude Cowork — trained on your voice, your style, and your newsletter's unique positioning. Write better, faster, without sounding like AI.", skill: 'A fully configured, personalized newsletter writing .Skill.' },
+    { num: 7, img: 'session-7.png', title: 'Building Your Notes Traffic Strategy', desc: "Substack Notes is the most underused growth lever on the platform. Trending formats, traffic strategies, and your first 30 days of Notes content — built and scheduled.", skill: 'A 30-day Notes content calendar and your traffic strategy mapped.' },
+    { num: 8, img: 'session-8.png', title: 'Substack Monetization Mastery', desc: "How free newsletters make money. What separates free from paid. How to price your subscription. Monthly vs. yearly vs. Founding Member — and the advanced strategies behind 6-figure newsletter launches.", skill: 'Your full monetization architecture configured and live.' },
   ]
 
   return (
     <section className="bg-cream py-20 px-6">
       <div className="max-w-page mx-auto">
-        <p className="font-sans text-[12px] font-bold text-orange uppercase tracking-[0.15em] mb-3">The 6 Sessions</p>
+        <p className="font-sans text-[12px] font-bold text-orange uppercase tracking-[0.15em] mb-3">The 8 Sessions</p>
         <h2 className="font-serif text-[clamp(30px,4vw,44px)] leading-[1.15] mb-3">
           Here's what you'll build.
         </h2>
@@ -201,15 +203,15 @@ function Sessions() {
         <div className="space-y-0 divide-y divide-black/10">
           {sessions.map((s) => (
             <div key={s.num} className="py-6 flex flex-col md:flex-row gap-4 md:gap-8">
-              <div className="md:w-[80px] flex-shrink-0">
-                <img src={`/images/${s.img}`} alt={`Session ${s.num}`} className="w-16 h-16 rounded-lg object-cover" />
+              <div className="md:w-[160px] flex-shrink-0">
+                <img src={`/images/${s.img}`} alt={`Session ${s.num}`} className="w-40 h-40 rounded-lg object-cover" />
               </div>
               <div className="flex-1">
                 <span className="font-sans text-[11px] font-bold text-orange uppercase tracking-wider">Session {s.num}</span>
-                <h3 className="font-serif text-[clamp(18px,2vw,22px)] font-bold leading-[1.3] mb-2">{s.title}</h3>
+                <h3 className="font-serif text-[clamp(18px,2vw,22px)] font-normal leading-[1.3] mb-2">{s.title}</h3>
                 <p className="font-sans text-[14px] text-black/60 leading-relaxed mb-2">{s.desc}</p>
                 <p className="font-sans text-[13px] text-black/50">
-                  <span className="text-green-700 font-semibold">+ You leave with:</span> {s.skill}
+                  <span className="text-orange font-semibold">→ You leave with:</span> {s.skill}
                 </p>
               </div>
             </div>
@@ -286,8 +288,8 @@ function Instructors() {
           {/* Nicolas Cole */}
           <div>
             <div className="flex items-center gap-4 mb-4">
-              <div className="w-16 h-16 rounded-full flex-shrink-0 overflow-hidden border-2 border-yellow">
-                <img src="/images/cole.png" alt="Nicolas Cole" className="w-full h-full object-cover object-top" />
+              <div className="w-16 h-16 flex-shrink-0 overflow-hidden rounded-lg">
+                <img src="/images/cole-headshot.png" alt="Nicolas Cole" className="w-full h-full object-cover" />
               </div>
               <div>
                 <h4 className="font-display text-[20px] font-bold uppercase tracking-wide">Nicolas Cole</h4>
@@ -312,8 +314,8 @@ function Instructors() {
           {/* Dickie Bush */}
           <div>
             <div className="flex items-center gap-4 mb-4">
-              <div className="w-16 h-16 rounded-full flex-shrink-0 overflow-hidden border-2 border-yellow">
-                <img src="/images/dickie.png" alt="Dickie Bush" className="w-full h-full object-cover object-top" />
+              <div className="w-16 h-16 flex-shrink-0 overflow-hidden rounded-lg">
+                <img src="/images/dickie-headshot.png" alt="Dickie Bush" className="w-full h-full object-cover" />
               </div>
               <div>
                 <h4 className="font-display text-[20px] font-bold uppercase tracking-wide">Dickie Bush</h4>
@@ -338,32 +340,115 @@ function Instructors() {
   )
 }
 
-/* ─── Section 7: Pricing ─── */
+/* ─── Section 7: Newsletters Proof ─── */
+function NewslettersProof() {
+  const newsletters = [
+    {
+      name: 'Category Pirates',
+      desc: 'The leading newsletter on Category Design',
+      stats: ['Top 10 Business Newsletter on Substack', '30,000+ free subscribers', '$150,000+/yr in paid subscriptions'],
+    },
+    {
+      name: 'Write With AI',
+      desc: 'The leading newsletter on Writing With AI',
+      stats: ['Top 5 Education Newsletter on Substack', '50,000+ free subscribers', '$300,000+/yr in paid subscriptions'],
+    },
+    {
+      name: 'Start Writing Online',
+      desc: 'The leading newsletter on how to Start Writing Online',
+      stats: ['100,000+ free subscribers', 'The engine of Ship 30 for 30'],
+    },
+    {
+      name: 'Start Ghostwriting',
+      desc: 'The leading newsletter on how to Start Ghostwriting',
+      stats: ['100,000+ free subscribers', 'The engine of Premium Ghostwriting Academy, an 8-figure business'],
+    },
+  ]
+
+  return (
+    <section className="bg-yellow py-20 px-6">
+      <div className="max-w-page mx-auto">
+        <h2 className="font-serif text-[clamp(28px,3.5vw,40px)] leading-[1.15] mb-12 text-center">
+          Our Newsletters—Proof We Know<br />What We're Talking About
+        </h2>
+
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+          {newsletters.map((nl) => (
+            <div key={nl.name} className="border-t-2 border-black pt-4">
+              <h4 className="font-sans text-[18px] font-bold mb-1">{nl.name}</h4>
+              <p className="font-sans text-[13px] text-black/60 mb-3">{nl.desc}</p>
+              <ul className="list-disc list-inside space-y-1">
+                {nl.stats.map((s, i) => (
+                  <li key={i} className="font-sans text-[13px] text-black/80">{s}</li>
+                ))}
+              </ul>
+            </div>
+          ))}
+        </div>
+
+        <p className="font-serif text-[16px] italic text-black/70 mt-12">
+          Created by the founders of Ship 30 for 30,<br />
+          Premium Ghostwriting Academy,<br />
+          Typeshare, Write With AI, and more.
+        </p>
+      </div>
+    </section>
+  )
+}
+
+/* ─── Section 8: Pricing ─── */
 function Pricing({ ctaUrl }: { ctaUrl: string }) {
+  const valueItems = [
+    { name: '8 Live Sessions with Dickie Bush & Nicolas Cole', price: '$800' },
+    { name: 'Session Replays + Slide Decks', price: '$200' },
+    { name: 'Substack Templates Pack', price: '$99' },
+    { name: 'Newsletter Writing .Skill', price: '$150' },
+    { name: 'Notes Traffic .Skill', price: '$150' },
+    { name: 'BONUS: Big Substack FAQ File', price: '$99' },
+    { name: 'BONUS: Design Secrets', price: '$149' },
+    { name: 'BONUS: Substack Notes Swipe File', price: '$99' },
+    { name: 'BONUS: Substack Sequence Writer', price: '$99' },
+  ]
+
   return (
     <section className="bg-yellow py-20 px-6">
       <div className="max-w-page mx-auto text-center">
-        <h2 className="font-serif text-[clamp(30px,4vw,44px)] leading-[1.15] mb-3">
-          Join the Bootcamp
+        <p className="font-sans text-[12px] font-bold text-orange uppercase tracking-[0.15em] mb-4">Join the Bootcamp</p>
+        <h2 className="font-serif text-[clamp(30px,4vw,44px)] leading-[1.15] mb-4">
+          This isn't self-paced content<br />you buy and forget.
         </h2>
-        <p className="font-sans text-[16px] text-black/70 mb-2">
-          This isn't self-paced content you buy and forget.
-        </p>
         <p className="font-sans text-[16px] text-black/70 mb-10">
-          We build together. You show up, you do the work, you leave<br />with a system and the replay recordings forever.
+          We <span className="underline decoration-orange">build together</span>. You <span className="underline decoration-orange">show up</span>, you <span className="underline decoration-orange">do the work</span>, you <span className="underline decoration-orange">leave<br />with a system</span> and the replay recordings forever.
         </p>
 
-        <div className="inline-block bg-white rounded-xl shadow-lg p-10 mb-6">
+        {/* Value breakdown table */}
+        <div className="inline-block bg-white rounded-xl shadow-lg px-8 py-6 mb-10 text-left">
+          {valueItems.map((item, i) => (
+            <div key={i} className={`flex justify-between items-center py-2.5 gap-12 ${i < valueItems.length - 1 ? 'border-b border-black/10' : 'border-b border-black/10'}`}>
+              <span className="font-sans text-[13px] text-black/80">{item.name}</span>
+              <span className="font-sans text-[13px] text-black/60 flex-shrink-0">{item.price}</span>
+            </div>
+          ))}
+          <div className="flex justify-between items-center pt-3">
+            <span className="font-sans text-[13px] font-bold">Total Value</span>
+            <span className="font-serif text-[24px] font-bold">$1,845</span>
+          </div>
+        </div>
+
+        {/* Price */}
+        <div className="mb-6">
           <p className="font-sans text-[12px] font-bold text-black/50 uppercase tracking-wider mb-2">Your Price</p>
-          <p className="font-serif text-[clamp(48px,8vw,72px)] font-bold leading-none mb-4">$800</p>
-          <a href={ctaUrl} className="inline-block bg-orange text-white font-sans text-[15px] font-bold uppercase tracking-[0.08em] px-12 py-4 rounded-lg hover:bg-orange/90 transition w-full">
-            Join the Bootcamp →
+          <p className="font-serif text-[clamp(48px,8vw,72px)] font-bold leading-none mb-3">$800</p>
+          <p className="font-sans text-[13px] text-black/60 mb-1">Or <span className="font-bold">2 payments of $420</span></p>
+          <p className="font-sans text-[13px] text-black/60 mb-6">Founding member / prior bootcamp rate: <span className="font-bold">$600</span></p>
+          <a href={ctaUrl} className="inline-block bg-orange text-white font-sans text-[15px] font-bold uppercase tracking-[0.08em] px-16 py-4 rounded-lg hover:bg-orange/90 transition">
+            Join the Substack Starter Sprint
           </a>
         </div>
 
         <div className="max-w-[400px] mx-auto">
           <p className="font-sans text-[12px] text-black/40 mt-4">
-            6 live sessions · Cart opens March 9 · Cart closes March 15 · Kickoff Monday March 16 · Limited seats
+            Cart opens March 9 · Cart closes March 15 ·<br />Kickoff Monday March 16 · Limited seats
           </p>
         </div>
       </div>
@@ -482,6 +567,7 @@ export default function App({ withFbPixel = false, ctaUrl = DEFAULT_CTA_URL }: {
       <FadeIn><Sessions /></FadeIn>
       <FadeIn><Bonuses /></FadeIn>
       <FadeIn><Instructors /></FadeIn>
+      <FadeIn><NewslettersProof /></FadeIn>
       <FadeIn><Pricing ctaUrl={ctaUrl} /></FadeIn>
       <FadeIn><ReadyToBuild ctaUrl={ctaUrl} /></FadeIn>
       <FadeIn><FAQ /></FadeIn>
