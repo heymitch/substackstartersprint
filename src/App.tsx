@@ -272,65 +272,67 @@ function Bonuses() {
 
 /* ─── Section 6: Instructors ─── */
 function Instructors() {
-  const newsletters = [
-    { name: 'Category Pirates', desc: 'The leading newsletter on Category Design', stats: 'Top 10 Business Newsletter on Substack\n30,000+ free subscribers\n$150,000+/yr in paid subscriptions' },
-    { name: 'Start Writing Online', desc: 'The leading newsletter on how to Start Writing Online', stats: '100,000+ free subscribers\nThe engine of Ship 30 for 30' },
-    { name: 'Write With AI', desc: 'The leading newsletter on Writing With AI', stats: 'Top 5 Education Newsletter on Substack\n50,000+ free subscribers\n$300,000+/yr in paid subscriptions' },
-    { name: 'Start Ghostwriting', desc: 'The leading newsletter on how to Start Ghostwriting', stats: '100,000+ free subscribers\nThe engine of Premium Ghostwriting Academy, an 8-figure business' },
-  ]
-
   return (
-    <section className="bg-yellow py-20 px-6">
+    <section className="bg-cream py-20 px-6">
       <div className="max-w-page mx-auto">
         <p className="font-sans text-[12px] font-bold text-orange uppercase tracking-[0.15em] mb-3">Meet Your Instructors</p>
-        <p className="font-sans text-[15px] text-black/60 mb-6">Everything we teach, we use ourselves.</p>
-        <h2 className="font-serif text-[clamp(28px,3.5vw,40px)] leading-[1.15] mb-10">
+        <h2 className="font-serif text-[clamp(28px,3.5vw,40px)] leading-[1.15] mb-3">
           Built by people who actually build<br />newsletters for a living.
         </h2>
+        <p className="font-sans text-[15px] text-black/60 mb-12">Everything <span className="underline">we teach</span>, we <span className="underline">use ourselves</span>.</p>
 
-        <div className="space-y-4 mb-12">
-          <div className="bg-dark-deep text-cream rounded-xl p-6 flex flex-col md:flex-row gap-6 items-center">
-            <div className="w-20 h-20 rounded-full flex-shrink-0 overflow-hidden">
-              <img src="/images/cole.png" alt="Nicolas Cole" className="w-full h-full object-cover object-top" />
+        {/* Side-by-side instructor bios */}
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
+          {/* Nicolas Cole */}
+          <div>
+            <div className="flex items-center gap-4 mb-4">
+              <div className="w-16 h-16 rounded-full flex-shrink-0 overflow-hidden border-2 border-yellow">
+                <img src="/images/cole.png" alt="Nicolas Cole" className="w-full h-full object-cover object-top" />
+              </div>
+              <div>
+                <h4 className="font-display text-[20px] font-bold uppercase tracking-wide">Nicolas Cole</h4>
+                <p className="font-sans text-[11px] font-bold text-orange uppercase tracking-wider">Co-Founder, Premium Ghostwriting Academy</p>
+              </div>
             </div>
-            <div>
-              <h4 className="font-serif text-[18px] font-bold text-cream mb-2">Nicolas Cole</h4>
-              <p className="font-sans text-[14px] text-white/70 leading-relaxed">
-                Author of the best-selling book <em>The Art & Business of Online Writing</em>.
+            <div className="border-t border-black/10 pt-4">
+              <p className="font-sans text-[14px] text-black/70 leading-relaxed mb-4">
+                Author of the best-selling book <em className="font-semibold">The Art & Business of Online Writing</em>.
                 Founder of the first ghostwriting agency for Silicon Valley founders & executives.
-                10+ years writing online. 400+ columns for Inc Magazine.
+              </p>
+              <p className="font-sans text-[14px] text-black/70 leading-relaxed mb-4">
+                10+ years writing online. 400+ columns for Inc. Magazine.
+                Cole pioneered the frameworks that made short-form writing go viral and has spent the last five years building four category-defining newsletters.
+              </p>
+              <p className="font-serif text-[14px] text-orange italic">
+                He runs Write With AI, the #1-ranked AI writing newsletter.
               </p>
             </div>
           </div>
-          <div className="bg-dark-deep text-cream rounded-xl p-6 flex flex-col md:flex-row gap-6 items-center">
-            <div className="w-20 h-20 rounded-full flex-shrink-0 overflow-hidden">
-              <img src="/images/dickie.png" alt="Dickie Bush" className="w-full h-full object-cover object-top" />
+
+          {/* Dickie Bush */}
+          <div>
+            <div className="flex items-center gap-4 mb-4">
+              <div className="w-16 h-16 rounded-full flex-shrink-0 overflow-hidden border-2 border-yellow">
+                <img src="/images/dickie.png" alt="Dickie Bush" className="w-full h-full object-cover object-top" />
+              </div>
+              <div>
+                <h4 className="font-display text-[20px] font-bold uppercase tracking-wide">Dickie Bush</h4>
+                <p className="font-sans text-[11px] font-bold text-orange uppercase tracking-wider">Co-Founder, Ship 30 for 30</p>
+              </div>
             </div>
-            <div>
-              <h4 className="font-serif text-[18px] font-bold text-cream mb-2">Dickie Bush</h4>
-              <p className="font-sans text-[14px] text-white/70 leading-relaxed">
+            <div className="border-t border-black/10 pt-4">
+              <p className="font-sans text-[14px] text-black/70 leading-relaxed mb-4">
                 Former Wall Street trader at BlackRock turned Digital Writer & Digital Entrepreneur. Creator of Ship 30 for 30 — the fastest-growing cohort-based writing program on the internet.
               </p>
+              <p className="font-sans text-[14px] text-black/70 leading-relaxed mb-4">
+                In January 2020, Dickie made a bet: write one short-form piece every day for 30 days. That challenge became a writing cohort that's helped 10,000+ people find their voice online — and a newsletter empire that followed.
+              </p>
+              <p className="font-serif text-[14px] text-orange italic">
+                His frameworks power millions of posts across the internet.
+              </p>
             </div>
           </div>
         </div>
-
-        <h3 className="font-serif text-[clamp(22px,2.5vw,30px)] leading-[1.2] mb-2">
-          Our Newsletters — Proof We Know What We're Talking About
-        </h3>
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mt-6">
-          {newsletters.map((n, i) => (
-            <div key={i} className="bg-white/50 border border-black/10 rounded-lg p-5">
-              <h4 className="font-serif text-[18px] font-bold mb-1">{n.name}</h4>
-              <p className="font-sans text-[13px] text-black/60 mb-2">{n.desc}</p>
-              <p className="font-sans text-[12px] text-black/50 whitespace-pre-line">{n.stats}</p>
-            </div>
-          ))}
-        </div>
-
-        <p className="font-sans text-[14px] text-black/60 mt-8">
-          Created by the founders of Ship 30 for 30, Premium Ghostwriting Academy, Typeshare, Write With AI, and more.
-        </p>
       </div>
     </section>
   )
