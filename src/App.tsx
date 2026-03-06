@@ -26,11 +26,6 @@ function FadeIn({ children, className = '', delay = 0 }: { children: React.React
   )
 }
 
-/* ─── Substack Logo ─── */
-function SubstackLogo({ className = '' }: { className?: string }) {
-  return <img src="/images/substack-logo.svg" alt="Substack" className={className} />
-}
-
 /* ─── Section 1: Hero ─── */
 function Hero() {
   return (
