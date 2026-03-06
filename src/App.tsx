@@ -1,7 +1,7 @@
 import './index.css'
 import { useState, useEffect, useRef } from 'react'
 
-const CTA_URL = 'https://ship.samcart.com/products/substack-starter-sprint'
+const DEFAULT_CTA_URL = 'https://ship.samcart.com/products/substack-starter-sprint'
 
 /* ─── Fade-up on scroll ─── */
 function FadeIn({ children, className = '', delay = 0 }: { children: React.ReactNode; className?: string; delay?: number }) {
@@ -351,7 +351,7 @@ function Instructors() {
 }
 
 /* ─── Section 7: Pricing ─── */
-function Pricing() {
+function Pricing({ ctaUrl }: { ctaUrl: string }) {
   return (
     <section className="bg-yellow py-20 px-6">
       <div className="max-w-page mx-auto text-center">
@@ -368,7 +368,7 @@ function Pricing() {
         <div className="inline-block bg-white rounded-xl shadow-lg p-10 mb-6">
           <p className="font-sans text-[12px] font-bold text-black/50 uppercase tracking-wider mb-2">Your Price</p>
           <p className="font-serif text-[clamp(48px,8vw,72px)] font-bold leading-none mb-4">$800</p>
-          <a href={CTA_URL} className="inline-block bg-orange text-white font-sans text-[15px] font-bold uppercase tracking-[0.08em] px-12 py-4 rounded-lg hover:bg-orange/90 transition w-full">
+          <a href={ctaUrl} className="inline-block bg-orange text-white font-sans text-[15px] font-bold uppercase tracking-[0.08em] px-12 py-4 rounded-lg hover:bg-orange/90 transition w-full">
             Join the Bootcamp →
           </a>
         </div>
@@ -384,14 +384,14 @@ function Pricing() {
 }
 
 /* ─── Section 8: Ready to Build + Guarantee ─── */
-function ReadyToBuild() {
+function ReadyToBuild({ ctaUrl }: { ctaUrl: string }) {
   return (
     <section className="bg-dark-deep py-20 px-6">
       <div className="max-w-page mx-auto text-center">
         <h2 className="font-serif text-[clamp(36px,5vw,56px)] text-cream leading-[1.1] mb-6">
           Ready to Build?
         </h2>
-        <a href={CTA_URL} className="inline-block bg-orange text-white font-sans text-[15px] font-bold uppercase tracking-[0.08em] px-12 py-4 rounded-lg hover:bg-orange/90 transition mb-6">
+        <a href={ctaUrl} className="inline-block bg-orange text-white font-sans text-[15px] font-bold uppercase tracking-[0.08em] px-12 py-4 rounded-lg hover:bg-orange/90 transition mb-6">
           Join the Bootcamp — $800 →
         </a>
         <p className="font-sans text-[14px] text-white/50 mb-12 whitespace-pre-line">
@@ -464,9 +464,11 @@ function FAQ() {
 }
 
 /* ─── App ─── */
-export default function App({ withFbPixel = false }: { withFbPixel?: boolean }) {
+export default function App({ withFbPixel = false, ctaUrl = DEFAULT_CTA_URL }: { withFbPixel?: boolean; ctaUrl?: string }) {
+  const pixelLoaded = useRef(false)
   useEffect(() => {
-    if (!withFbPixel) return
+    if (!withFbPixel || pixelLoaded.current) return
+    pixelLoaded.current = true
 
     const script = document.createElement('script')
     script.innerHTML = `
@@ -491,11 +493,6 @@ export default function App({ withFbPixel = false }: { withFbPixel?: boolean }) 
     img.src = 'https://www.facebook.com/tr?id=1262296197955979&ev=PageView&noscript=1'
     noscript.appendChild(img)
     document.head.appendChild(noscript)
-
-    return () => {
-      document.head.removeChild(script)
-      document.head.removeChild(noscript)
-    }
   }, [withFbPixel])
 
   return (
@@ -506,8 +503,8 @@ export default function App({ withFbPixel = false }: { withFbPixel?: boolean }) 
       <FadeIn><Sessions /></FadeIn>
       <FadeIn><Bonuses /></FadeIn>
       <FadeIn><Instructors /></FadeIn>
-      <FadeIn><Pricing /></FadeIn>
-      <FadeIn><ReadyToBuild /></FadeIn>
+      <FadeIn><Pricing ctaUrl={ctaUrl} /></FadeIn>
+      <FadeIn><ReadyToBuild ctaUrl={ctaUrl} /></FadeIn>
       <FadeIn><FAQ /></FadeIn>
     </main>
   )
