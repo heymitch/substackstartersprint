@@ -97,7 +97,7 @@ function HowItWorks() {
   ]
 
   return (
-    <section id="how-it-works" className="bg-cream border-x-[12px] border-orange pt-0 pb-16 px-6">
+    <section id="how-it-works" className="bg-cream border-x-[12px] border-orange pt-12 pb-16 px-6">
       {/* Gradient transition from hero */}
       <div className="h-8" style={{ background: 'linear-gradient(to bottom, rgba(255,255,255,0.49) 0%, rgba(0,0,0,0.15) 34%, rgba(0,0,0,0) 100%)' }} />
       <div className="max-w-page mx-auto">
