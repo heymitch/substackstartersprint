@@ -465,8 +465,10 @@ function FAQ() {
 
 /* ─── App ─── */
 export default function App({ withFbPixel = false }: { withFbPixel?: boolean }) {
+  const pixelLoaded = useRef(false)
   useEffect(() => {
-    if (!withFbPixel) return
+    if (!withFbPixel || pixelLoaded.current) return
+    pixelLoaded.current = true
 
     const script = document.createElement('script')
     script.innerHTML = `
@@ -491,11 +493,6 @@ export default function App({ withFbPixel = false }: { withFbPixel?: boolean }) 
     img.src = 'https://www.facebook.com/tr?id=1262296197955979&ev=PageView&noscript=1'
     noscript.appendChild(img)
     document.head.appendChild(noscript)
-
-    return () => {
-      document.head.removeChild(script)
-      document.head.removeChild(noscript)
-    }
   }, [withFbPixel])
 
   return (
