@@ -69,14 +69,14 @@ function Hero() {
         <div className="flex-1 flex gap-3 justify-center md:justify-end">
           <div className="flex flex-col items-start flex-1 max-w-[240px]">
             <div className="w-full flex-1 min-h-0 rounded overflow-hidden">
-              <img src="/images/dickie.png" alt="Dickie Bush" className="w-full h-full object-cover object-top" />
+              <img src="/images/cole.png" alt="Dickie Bush" className="w-full h-full object-cover object-top" />
             </div>
             <div className="w-full h-px bg-black/20 mt-2" />
             <span className="font-serif text-[14px] mt-1">Dickie Bush</span>
           </div>
           <div className="flex flex-col items-start flex-1 max-w-[240px]">
             <div className="w-full flex-1 min-h-0 rounded overflow-hidden">
-              <img src="/images/cole.png" alt="Nicolas Cole" className="w-full h-full object-cover object-top" />
+              <img src="/images/dickie.png" alt="Nicolas Cole" className="w-full h-full object-cover object-top" />
             </div>
             <div className="w-full h-px bg-black/20 mt-2" />
             <span className="font-serif text-[14px] mt-1">Nicolas Cole</span>
