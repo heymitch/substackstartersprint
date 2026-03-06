@@ -74,7 +74,7 @@ function Hero() {
             You show up, you do the work, you leave with a newsletter — and the replays forever.
           </p>
 
-          <a href="#how-it-works" className="inline-block bg-black text-white font-serif text-[14px] font-bold uppercase tracking-[0.1em] px-10 py-4 hover:bg-black/85 transition">
+          <a href="#how-it-works" className="inline-block bg-black text-white font-serif text-[14px] font-normal uppercase tracking-[0.1em] px-10 py-4 hover:bg-black/85 transition">
             How It Works
           </a>
 
@@ -84,18 +84,20 @@ function Hero() {
         </div>
 
         {/* Right column — headshots */}
-        <div className="flex-1 flex gap-4 justify-center md:justify-end">
-          <div className="flex flex-col items-center gap-2">
-            <div className="w-[220px] h-[320px] rounded overflow-hidden">
+        <div className="flex-1 flex gap-4 justify-center md:justify-end items-end">
+          <div className="flex flex-col items-start gap-0">
+            <div className="w-[220px] aspect-[3/4] rounded overflow-hidden">
               <img src="/images/dickie.png" alt="Dickie Bush" className="w-full h-full object-cover object-top" />
             </div>
-            <span className="font-sans text-[14px] font-medium">Dickie Bush</span>
+            <div className="w-full h-px bg-black/20 mt-2" />
+            <span className="font-serif text-[14px] mt-1">Dickie Bush</span>
           </div>
-          <div className="flex flex-col items-center gap-2">
-            <div className="w-[220px] h-[320px] rounded overflow-hidden">
+          <div className="flex flex-col items-start gap-0">
+            <div className="w-[220px] aspect-[3/4] rounded overflow-hidden">
               <img src="/images/cole.png" alt="Nicolas Cole" className="w-full h-full object-cover object-top" />
             </div>
-            <span className="font-sans text-[14px] font-medium">Nicolas Cole</span>
+            <div className="w-full h-px bg-black/20 mt-2" />
+            <span className="font-serif text-[14px] mt-1">Nicolas Cole</span>
           </div>
         </div>
       </div>
