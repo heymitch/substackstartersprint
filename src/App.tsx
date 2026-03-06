@@ -411,7 +411,7 @@ function Pricing({ ctaUrl }: { ctaUrl: string }) {
           Proven Frameworks.<br />Everything You Need to Launch and Grow.
         </h2>
         <p className="font-sans text-[16px] text-black/70 mb-10">
-          The same playbook from newsletters generating $1M+ in paid subscriptions.
+          The same playbook from newsletters that have generated $1M+ in paid subscriptions.
         </p>
 
         {/* Value breakdown table */}
