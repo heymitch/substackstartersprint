@@ -97,7 +97,9 @@ function HowItWorks() {
   ]
 
   return (
-    <section id="how-it-works" className="bg-cream border-x-[12px] border-orange py-16 px-6">
+    <section id="how-it-works" className="bg-cream border-x-[12px] border-orange pt-0 pb-16 px-6">
+      {/* Gradient transition from hero */}
+      <div className="h-16" style={{ background: 'linear-gradient(to bottom, rgba(255,255,255,0.49) 0%, rgba(0,0,0,1) 34%, rgba(0,0,0,0) 100%)' }} />
       <div className="max-w-page mx-auto">
         <p className="font-sans text-[12px] font-bold text-orange uppercase tracking-[0.15em] mb-3">How It Works</p>
         <h2 className="font-serif text-[clamp(30px,4vw,44px)] leading-[1.15] mb-3">
@@ -111,7 +113,7 @@ function HowItWorks() {
         <div className="grid grid-cols-2 md:grid-cols-4 gap-px bg-black/10">
           {stats.map((s, i) => (
             <div key={i} className="bg-cream p-6">
-              <span className="font-serif text-[clamp(36px,4vw,48px)] font-bold text-orange leading-none">{s.num}</span>
+              <span className="font-display text-[clamp(36px,4vw,48px)] font-bold text-orange leading-none">{s.num}</span>
               <p className="font-sans text-[16px] font-bold mt-1 whitespace-pre-line">{s.label}</p>
               <p className="font-sans text-[13px] text-black/60 mt-2 whitespace-pre-line leading-relaxed">{s.desc}</p>
             </div>
