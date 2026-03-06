@@ -29,7 +29,7 @@ function FadeIn({ children, className = '', delay = 0 }: { children: React.React
 /* ─── Section 1: Hero ─── */
 function Hero() {
   return (
-    <section className="bg-cream border-[12px] border-orange">
+    <section className="bg-cream border-x-[12px] border-t-[12px] border-orange">
       {/* Logo + Title */}
       <div className="text-center pt-8 pb-4">
         <img src="/images/substack-wordmark.png" alt="Substack" className="h-6 mx-auto mb-3" />
