@@ -529,7 +529,7 @@ function FAQ() {
         </div>
 
         <div className="mt-16 pt-8 border-t border-white/10 text-center">
-          <p className="font-sans text-[13px] text-white/30">© 2026 Substack Sprint. All rights reserved</p>
+          <p className="font-sans text-[13px] text-white/30">© 2026 Substack Starter Sprint. All rights reserved</p>
         </div>
       </div>
     </section>
