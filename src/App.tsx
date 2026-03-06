@@ -484,15 +484,6 @@ export default function App({ withFbPixel = false, ctaUrl = DEFAULT_CTA_URL }: {
       fbq('track', 'PageView');
     `
     document.head.appendChild(script)
-
-    const noscript = document.createElement('noscript')
-    const img = document.createElement('img')
-    img.height = 1
-    img.width = 1
-    img.style.display = 'none'
-    img.src = 'https://www.facebook.com/tr?id=1262296197955979&ev=PageView&noscript=1'
-    noscript.appendChild(img)
-    document.head.appendChild(noscript)
   }, [withFbPixel])
 
   return (
