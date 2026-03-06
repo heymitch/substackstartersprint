@@ -45,8 +45,8 @@ function Hero() {
         {/* Left column */}
         <div className="flex-1 md:max-w-[45%] pb-4">
           <h2 className="font-serif text-[clamp(28px,3.5vw,42px)] leading-[1.15] mb-6">
-            Launch, market, and monetize a category-defining{' '}
-            <strong>newsletter  in 14 days.</strong>
+            Launch A Category-Defining{' '}
+            <strong>Newsletter On Substack In 14-Days</strong>
           </h2>
           <p className="font-sans text-[15px] text-black/70 leading-relaxed mb-2">
             6 live sessions. Built together — with the founders of the internet's most successful writing businesses.
@@ -185,14 +185,12 @@ function Sessions() {
     { num: 4, img: 'session-4.png', title: 'Creating a Bonus Educational Email Course for Paid Readers', desc: "The fastest way to reduce churn is to immediately reward the upgrade. A Paid Educational Email Course that makes paid subscribers feel like they made the right decision from Day 1.", skill: 'A live paid subscriber onboarding sequence that increases retention.' },
     { num: 5, img: 'session-5.png', title: 'Newsletter Copywriting Secrets', desc: "The Cliffhanger Paywall, the Bonus Resource Paywall, and the free/paid cadence that maximizes reader engagement and paid conversion simultaneously.", skill: 'A repeatable content strategy for your ongoing newsletter.' },
     { num: 6, img: 'session-6.png', title: 'Newsletter Writing With Claude Cowork', desc: "Build a newsletter writing .Skill inside Claude Cowork — trained on your voice, your style, and your newsletter's unique positioning. Write better, faster, without sounding like AI.", skill: 'A fully configured, personalized newsletter writing .Skill.' },
-    { num: 7, img: 'session-7.png', title: 'Building Your Notes Traffic Strategy', desc: "Substack Notes is the most underused growth lever on the platform. Trending formats, traffic strategies, and your first 30 days of Notes content — built and scheduled.", skill: 'A 30-day Notes content calendar and your traffic strategy mapped.' },
-    { num: 8, img: 'session-8.png', title: 'Substack Monetization Mastery', desc: "How free newsletters make money. What separates free from paid. How to price your subscription. Monthly vs. yearly vs. Founding Member — and the advanced strategies behind 6-figure newsletter launches.", skill: 'Your full monetization architecture configured and live.' },
   ]
 
   return (
     <section className="bg-cream py-20 px-6">
       <div className="max-w-page mx-auto">
-        <p className="font-sans text-[12px] font-bold text-orange uppercase tracking-[0.15em] mb-3">The 8 Sessions</p>
+        <p className="font-sans text-[12px] font-bold text-orange uppercase tracking-[0.15em] mb-3">The 6 Sessions</p>
         <h2 className="font-serif text-[clamp(30px,4vw,44px)] leading-[1.15] mb-3">
           Here's what you'll build.
         </h2>
@@ -350,8 +348,8 @@ function NewslettersProof() {
     },
     {
       name: 'Write With AI',
-      desc: 'The leading newsletter on Writing With AI',
-      stats: ['Top 5 Education Newsletter on Substack', '50,000+ free subscribers', '$300,000+/yr in paid subscriptions'],
+      desc: 'The #1 paid education newsletter on Substack',
+      stats: ['100,000+ free subscribers', '$400,000+/yr in paid subscriptions'],
     },
     {
       name: 'Start Writing Online',
@@ -386,11 +384,6 @@ function NewslettersProof() {
           ))}
         </div>
 
-        <p className="font-serif text-[16px] italic text-black/70 mt-12">
-          Created by the founders of Ship 30 for 30,<br />
-          Premium Ghostwriting Academy,<br />
-          Typeshare, Write With AI, and more.
-        </p>
       </div>
     </section>
   )
@@ -399,7 +392,7 @@ function NewslettersProof() {
 /* ─── Section 8: Pricing ─── */
 function Pricing({ ctaUrl }: { ctaUrl: string }) {
   const valueItems = [
-    { name: '8 Live Sessions with Dickie Bush & Nicolas Cole', price: '$800' },
+    { name: '6 Live Sessions with Dickie Bush & Nicolas Cole', price: '$800' },
     { name: 'Session Replays + Slide Decks', price: '$200' },
     { name: 'Substack Templates Pack', price: '$99' },
     { name: 'Newsletter Writing .Skill', price: '$150' },
@@ -438,9 +431,7 @@ function Pricing({ ctaUrl }: { ctaUrl: string }) {
         {/* Price */}
         <div className="mb-6">
           <p className="font-sans text-[12px] font-bold text-black/50 uppercase tracking-wider mb-2">Your Price</p>
-          <p className="font-serif text-[clamp(48px,8vw,72px)] font-bold leading-none mb-3">$800</p>
-          <p className="font-sans text-[13px] text-black/60 mb-1">Or <span className="font-bold">2 payments of $420</span></p>
-          <p className="font-sans text-[13px] text-black/60 mb-6">Founding member / prior bootcamp rate: <span className="font-bold">$600</span></p>
+          <p className="font-serif text-[clamp(48px,8vw,72px)] font-bold leading-none mb-6">$800</p>
           <a href={ctaUrl} className="inline-block bg-orange text-white font-sans text-[15px] font-bold uppercase tracking-[0.08em] px-16 py-4 rounded-lg hover:bg-orange/90 transition">
             Join the Substack Starter Sprint
           </a>
