@@ -59,9 +59,9 @@ function Hero() {
       <div className="w-full h-px bg-black/15 mx-auto max-w-page" />
 
       {/* Content: left text, right photos */}
-      <div className="max-w-page mx-auto px-6 py-10 flex flex-col md:flex-row gap-8 md:gap-12">
+      <div className="max-w-page mx-auto px-6 pt-10 pb-6 flex flex-col md:flex-row gap-8 md:gap-6">
         {/* Left column */}
-        <div className="flex-1 md:max-w-[55%]">
+        <div className="flex-1 md:max-w-[50%] pb-4">
           <h2 className="font-serif text-[clamp(28px,3.5vw,42px)] leading-[1.15] mb-6">
             Launch, market, and monetize a category-defining{' '}
             <strong>newsletter  in 14 days.</strong>
@@ -84,16 +84,16 @@ function Hero() {
         </div>
 
         {/* Right column — headshots */}
-        <div className="flex-1 flex gap-4 justify-center md:justify-end items-stretch">
-          <div className="flex flex-col items-start gap-0">
-            <div className="w-[220px] flex-1 rounded overflow-hidden">
+        <div className="flex-1 flex gap-4 justify-center md:justify-end">
+          <div className="flex flex-col items-start">
+            <div className="w-[220px] h-[340px] rounded overflow-hidden">
               <img src="/images/dickie.png" alt="Dickie Bush" className="w-full h-full object-cover object-top" />
             </div>
             <div className="w-full h-px bg-black/20 mt-2" />
             <span className="font-serif text-[14px] mt-1">Dickie Bush</span>
           </div>
-          <div className="flex flex-col items-start gap-0">
-            <div className="w-[220px] flex-1 rounded overflow-hidden">
+          <div className="flex flex-col items-start">
+            <div className="w-[220px] h-[340px] rounded overflow-hidden">
               <img src="/images/cole.png" alt="Nicolas Cole" className="w-full h-full object-cover object-top" />
             </div>
             <div className="w-full h-px bg-black/20 mt-2" />
