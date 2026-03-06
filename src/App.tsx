@@ -35,22 +35,9 @@ function SubstackLogo({ className = '' }: { className?: string }) {
 function Hero() {
   return (
     <section className="bg-cream border-[12px] border-orange">
-      {/* Top badge */}
-      <div className="flex justify-center pt-6 pb-4">
-        <div className="flex items-center gap-2 bg-black text-white px-5 py-2.5 rounded-full">
-          <span className="w-2 h-2 rounded-full bg-green-500 animate-pulse" />
-          <span className="font-sans text-[11px] font-bold uppercase tracking-[0.12em]">
-            Next Live Class: March 16, 2026
-          </span>
-        </div>
-      </div>
-
       {/* Logo + Title */}
-      <div className="text-center pb-4">
-        <div className="flex items-center justify-center gap-2 mb-2">
-          <SubstackLogo className="w-7 h-7" />
-          <span className="font-sans text-[14px] font-bold text-orange tracking-wider uppercase">substack</span>
-        </div>
+      <div className="text-center pt-8 pb-4">
+        <img src="/images/substack-wordmark.png" alt="Substack" className="h-6 mx-auto mb-3" />
         <h1 className="font-display text-[clamp(48px,7vw,80px)] font-black leading-[0.95] tracking-tight uppercase">
           Starter Sprint
         </h1>
