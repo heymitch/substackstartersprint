@@ -256,7 +256,7 @@ function Bonuses() {
           {bonuses.map((b) => (
             <div key={b.num} className="bg-cream/5 border border-white/10 rounded-lg p-6">
               <div className="flex items-center gap-4 mb-4">
-                <img src={`/images/bonus-${b.num}.png`} alt={b.title} className="w-16 h-20 object-contain flex-shrink-0" />
+                <img src={`/images/bonus-${b.num}.png`} alt={b.title} className="w-32 h-40 object-contain flex-shrink-0" />
                 <div>
                   <span className="font-sans text-[11px] font-bold text-orange uppercase tracking-wider">Bonus #{b.num}</span>
                   <h3 className="font-serif text-[20px] font-bold text-cream">{b.title}</h3>
