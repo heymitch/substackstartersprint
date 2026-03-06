@@ -46,7 +46,7 @@ function Hero() {
         <div className="flex-1 md:max-w-[45%] pb-4">
           <h2 className="font-serif text-[clamp(28px,3.5vw,42px)] leading-[1.15] mb-6">
             Launch A Category-Defining{' '}
-            <strong>Newsletter On Substack In 14-Days</strong>
+            <strong>Newsletter On Substack In 14 Days</strong>
           </h2>
           <p className="font-sans text-[15px] text-black/70 leading-relaxed mb-2">
             6 live sessions. Built together — with the founders of the internet's most successful writing businesses.
