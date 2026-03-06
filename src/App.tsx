@@ -451,27 +451,36 @@ function Pricing({ ctaUrl }: { ctaUrl: string }) {
 function ReadyToBuild({ ctaUrl }: { ctaUrl: string }) {
   return (
     <section className="bg-dark-deep py-20 px-6">
-      <div className="max-w-page mx-auto text-center">
-        <h2 className="font-serif text-[clamp(36px,5vw,56px)] text-cream leading-[1.1] mb-6">
-          Ready to Build?
-        </h2>
-        <a href={ctaUrl} className="inline-block bg-orange text-white font-sans text-[15px] font-bold uppercase tracking-[0.08em] px-12 py-4 rounded-lg hover:bg-orange/90 transition mb-6">
-          Join the Bootcamp—$800 →
-        </a>
-        <p className="font-sans text-[14px] text-white/50 mb-12 whitespace-pre-line">
-          {'March 16 – March 27, 2026\nLimited seats\nLifetime access to all materials'}
-        </p>
+      <div className="max-w-page mx-auto">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-start">
+          {/* Left: Guarantee */}
+          <div className="border-t border-white/10 pt-6">
+            <p className="font-sans text-[12px] font-bold text-orange uppercase tracking-wider mb-3">First-Week Guarantee</p>
+            <h3 className="font-serif text-[24px] text-cream mb-4">7-Day Money-Back Guarantee</h3>
+            <p className="font-sans text-[14px] text-white/50 leading-relaxed">
+              If in the first session of the bootcamp you show up,
+              do the work, and decide this isn't what you expected
+              just let us know within 7 days and
+              we'll give you a full refund.
+              No questions asked.
+            </p>
+            <div className="border-t border-white/10 mt-6" />
+          </div>
 
-        <div className="max-w-[600px] mx-auto border border-white/10 rounded-xl p-8">
-          <p className="font-sans text-[12px] font-bold text-orange uppercase tracking-wider mb-3">First-Week Guarantee</p>
-          <h3 className="font-serif text-[24px] text-cream font-bold mb-4">7-Day Money-Back Guarantee</h3>
-          <p className="font-sans text-[14px] text-white/60 leading-relaxed">
-            If in the first session of the bootcamp you show up,
-            do the work, and decide this isn't what you expected —
-            just let us know within 7 days and
-            we'll give you a full refund.
-            No questions asked.
-          </p>
+          {/* Right: CTA */}
+          <div className="text-center md:text-left">
+            <h2 className="font-serif text-[clamp(36px,5vw,48px)] text-cream leading-[1.1] mb-6">
+              Ready to Build?
+            </h2>
+            <a href={ctaUrl} className="inline-block bg-orange text-white font-sans text-[15px] font-bold uppercase tracking-[0.08em] px-12 py-4 rounded-lg hover:bg-orange/90 transition mb-6">
+              Join the Bootcamp—$800 →
+            </a>
+            <p className="font-sans text-[13px] text-white/40 leading-relaxed">
+              March 16 – March 27, 2026<br />
+              Limited seats<br />
+              Lifetime access to all materials
+            </p>
+          </div>
         </div>
       </div>
     </section>
