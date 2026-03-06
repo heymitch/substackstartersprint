@@ -408,10 +408,10 @@ function Pricing({ ctaUrl }: { ctaUrl: string }) {
       <div className="max-w-page mx-auto text-center">
         <p className="font-sans text-[12px] font-bold text-orange uppercase tracking-[0.15em] mb-4">Join the Bootcamp</p>
         <h2 className="font-serif text-[clamp(30px,4vw,44px)] leading-[1.15] mb-4">
-          This isn't self-paced content<br />you buy and forget.
+          6 live sessions. Proven frameworks.<br />Everything you need to launch.
         </h2>
         <p className="font-sans text-[16px] text-black/70 mb-10">
-          We <span className="underline decoration-orange">build together</span>. You <span className="underline decoration-orange">show up</span>, you <span className="underline decoration-orange">do the work</span>, you <span className="underline decoration-orange">leave<br />with a system</span> and the replay recordings forever.
+          Every <span className="underline decoration-orange">template</span>, <span className="underline decoration-orange">swipe file</span>, and <span className="underline decoration-orange">.Skill</span> included—built from newsletters<br />generating $1M+/yr in paid subscriptions.
         </p>
 
         {/* Value breakdown table */}
