@@ -218,15 +218,14 @@ function Sessions() {
         </div>
 
         <div className="mt-16 text-center">
-          <h2 className="font-serif text-[clamp(30px,4vw,48px)] leading-[1.15] mb-4">
+          <h2 className="font-serif text-[clamp(30px,4vw,48px)] leading-[1.15] mb-6">
             This isn't self-paced content<br />you buy and forget.
           </h2>
-          <div className="inline-block bg-dark text-cream px-6 py-3 rounded">
-            <p className="font-sans text-[15px] font-medium">
-              We build <em className="text-orange not-italic font-bold">together</em>. You show up.
-              <br />You leave with a <em className="text-orange not-italic font-bold">system</em>.
-            </p>
-          </div>
+          <div className="w-40 h-px bg-black/20 mx-auto mb-6" />
+          <p className="font-sans text-[15px] font-bold">
+            We build <span className="text-orange">together</span>. You show up.
+            <br />You leave with <span className="text-orange">a system</span>.
+          </p>
         </div>
       </div>
     </section>
