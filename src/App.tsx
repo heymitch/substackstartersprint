@@ -97,9 +97,10 @@ function HowItWorks() {
   ]
 
   return (
-    <section id="how-it-works" className="bg-cream border-x-[12px] border-orange pt-12 pb-16 px-6">
-      {/* Gradient transition from hero */}
-      <div className="h-8" style={{ background: 'linear-gradient(to bottom, rgba(255,255,255,0.49) 0%, rgba(0,0,0,0.15) 34%, rgba(0,0,0,0) 100%)' }} />
+    <section id="how-it-works" className="bg-cream border-x-[12px] border-orange pt-0 pb-16 px-6">
+      {/* Gradient transition from hero — full width to orange border */}
+      <div className="h-8 -mx-6" style={{ background: 'linear-gradient(to bottom, rgba(255,255,255,0.49) 0%, rgba(0,0,0,0.15) 34%, rgba(0,0,0,0) 100%)' }} />
+      <div className="pt-8" />
       <div className="max-w-page mx-auto">
         <p className="font-sans text-[12px] font-bold text-orange uppercase tracking-[0.15em] mb-3">How It Works</p>
         <h2 className="font-serif text-[clamp(30px,4vw,44px)] leading-[1.15] mb-3">
