@@ -32,7 +32,7 @@ function Hero() {
     <section className="bg-cream border-x-[12px] border-t-[12px] border-orange">
       {/* Logo + Title */}
       <div className="text-center pt-8 pb-4">
-        <img src="/images/substack-wordmark.png" alt="Substack" className="h-6 mx-auto mb-3" />
+        <img src="/images/substack-wordmark.png" alt="Substack" className="h-12 mx-auto mb-3" />
         <h1 className="font-display text-[clamp(48px,7vw,80px)] font-black leading-[0.95] tracking-tight uppercase">
           Starter Sprint
         </h1>
