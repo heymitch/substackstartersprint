@@ -49,11 +49,11 @@ function Hero() {
             <strong>Newsletter On Substack In 14 Days</strong>
           </h2>
           <p className="font-sans text-[15px] text-black/70 leading-relaxed mb-2">
-            6 live sessions. Built together — with the founders of the internet's most successful writing businesses.
+            6 live sessions. Built together—with the founders of the internet's most successful writing businesses.
           </p>
           <p className="font-sans text-[15px] text-black/70 leading-relaxed mb-8">
             This isn't self-paced content you buy and forget.
-            You show up, you do the work, you leave with a newsletter — and the replays forever.
+            You show up, you do the work, you leave with a newsletter—and the replays forever.
           </p>
 
           <a href="#how-it-works" className="inline-block bg-black text-white font-serif text-[14px] font-normal uppercase tracking-[0.1em] px-10 py-4 hover:bg-black/85 transition">
@@ -65,7 +65,7 @@ function Hero() {
           </p>
         </div>
 
-        {/* Right column — headshots, stretches to match left column height */}
+        {/* Right column—headshots, stretches to match left column height */}
         <div className="flex-1 flex gap-3 justify-center md:justify-end">
           <div className="flex flex-col items-start flex-1 max-w-[240px]">
             <div className="w-full flex-1 min-h-0 rounded overflow-hidden">
@@ -98,7 +98,7 @@ function HowItWorks() {
 
   return (
     <section id="how-it-works" className="bg-cream border-x-[12px] border-orange pt-0 pb-16 px-6">
-      {/* Gradient transition from hero — full width to orange border */}
+      {/* Gradient transition from hero—full width to orange border */}
       <div className="h-8 -mx-6" style={{ background: 'linear-gradient(to bottom, rgba(255,255,255,0.49) 0%, rgba(0,0,0,0.15) 34%, rgba(0,0,0,0) 100%)' }} />
       <div className="pt-8" />
       <div className="max-w-page mx-auto">
@@ -134,11 +134,11 @@ function RightForYou() {
     },
     {
       q: 'Do you have a following on social but <em>no email list?</em>',
-      a: "X, LinkedIn, Instagram — you've built an audience on rented land. One algorithm change and it's gone. The sprint moves your audience to email, permanently, before the platform makes that decision for you.",
+      a: "X, LinkedIn, Instagram—you've built an audience on rented land. One algorithm change and it's gone. The sprint moves your audience to email, permanently, before the platform makes that decision for you.",
     },
     {
       q: 'Do you have a <em>Substack</em> that never really took off?',
-      a: "You started, posted a few times, and went quiet. The sprint is a complete relaunch — better positioning, a real growth strategy, and the systems to stay consistent. Most stalled newsletters don't have a writing problem. They have a positioning problem. We fix that in Session 1.",
+      a: "You started, posted a few times, and went quiet. The sprint is a complete relaunch—better positioning, a real growth strategy, and the systems to stay consistent. Most stalled newsletters don't have a writing problem. They have a positioning problem. We fix that in Session 1.",
     },
     {
       q: 'Do you have a <em>free newsletter</em> but want to go paid?',
@@ -180,12 +180,12 @@ function RightForYou() {
 /* ─── Section 4: Sessions / What You'll Build ─── */
 function Sessions() {
   const sessions = [
-    { num: 1, img: 'session-1.png', title: 'Category Newsletter Positioning', desc: "The most important decision you'll make. Establish your credibility anchor, define your recurring offer, and nail your Category Title and Actionable Subtitle.", skill: 'Your newsletter name, positioning, and 1-liner — done.' },
-    { num: 2, img: 'session-2.png', title: 'Irresistible Newsletter Offer Stack', desc: "A newsletter isn't just content — it's an offer. Publishing cadences, Instant Bonus Unlocks, and your About Page written and published live.", skill: 'A fully written, live About Page and a subscriber offer stack that converts.' },
-    { num: 3, img: 'session-3.png', title: 'Writing Your Onboarding Sequence for Free Readers', desc: "A multi-email sequence that sells readers on your newsletter, introduces you, delivers any promised bonuses, and drives them toward your paid offer — written and live.", skill: 'An automated onboarding sequence running for every new free subscriber.' },
+    { num: 1, img: 'session-1.png', title: 'Category Newsletter Positioning', desc: "The most important decision you'll make. Establish your credibility anchor, define your recurring offer, and nail your Category Title and Actionable Subtitle.", skill: 'Your newsletter name, positioning, and 1-liner—done.' },
+    { num: 2, img: 'session-2.png', title: 'Irresistible Newsletter Offer Stack', desc: "A newsletter isn't just content—it's an offer. Publishing cadences, Instant Bonus Unlocks, and your About Page written and published live.", skill: 'A fully written, live About Page and a subscriber offer stack that converts.' },
+    { num: 3, img: 'session-3.png', title: 'Writing Your Onboarding Sequence for Free Readers', desc: "A multi-email sequence that sells readers on your newsletter, introduces you, delivers any promised bonuses, and drives them toward your paid offer—written and live.", skill: 'An automated onboarding sequence running for every new free subscriber.' },
     { num: 4, img: 'session-4.png', title: 'Creating a Bonus Educational Email Course for Paid Readers', desc: "The fastest way to reduce churn is to immediately reward the upgrade. A Paid Educational Email Course that makes paid subscribers feel like they made the right decision from Day 1.", skill: 'A live paid subscriber onboarding sequence that increases retention.' },
     { num: 5, img: 'session-5.png', title: 'Newsletter Copywriting Secrets', desc: "The Cliffhanger Paywall, the Bonus Resource Paywall, and the free/paid cadence that maximizes reader engagement and paid conversion simultaneously.", skill: 'A repeatable content strategy for your ongoing newsletter.' },
-    { num: 6, img: 'session-6.png', title: 'Newsletter Writing With Claude Cowork', desc: "Build a newsletter writing .Skill inside Claude Cowork — trained on your voice, your style, and your newsletter's unique positioning. Write better, faster, without sounding like AI.", skill: 'A fully configured, personalized newsletter writing .Skill.' },
+    { num: 6, img: 'session-6.png', title: 'Newsletter Writing With Claude Cowork', desc: "Build a newsletter writing .Skill inside Claude Cowork—trained on your voice, your style, and your newsletter's unique positioning. Write better, faster, without sounding like AI.", skill: 'A fully configured, personalized newsletter writing .Skill.' },
   ]
 
   return (
@@ -236,10 +236,10 @@ function Sessions() {
 /* ─── Section 5: Free Bonuses ─── */
 function Bonuses() {
   const bonuses = [
-    { num: 1, title: 'Big Substack FAQ File', desc: "Every question you'll have about Substack — answered. Built from hundreds of real student questions so you never waste time searching.", value: '$99' },
-    { num: 2, title: 'Design Secrets', desc: 'Cover art, logo placement, color palette, and the subtle visual choices that make a newsletter look established — even before it has thousands of subscribers.', value: '$149' },
+    { num: 1, title: 'Big Substack FAQ File', desc: "Every question you'll have about Substack—answered. Built from hundreds of real student questions so you never waste time searching.", value: '$99' },
+    { num: 2, title: 'Design Secrets', desc: 'Cover art, logo placement, color palette, and the subtle visual choices that make a newsletter look established—even before it has thousands of subscribers.', value: '$149' },
     { num: 3, title: 'Substack Notes Swipe File', desc: 'The exact Notes formats that drive follows, subscribers, and engagement. Stop staring at the blank Notes field. Steal what works.', value: '$99' },
-    { num: 4, title: 'Substack Sequence Writer', desc: 'A plug-and-play system for writing your email sequences — welcome emails, re-engagement emails, paid upgrade pitches without starting from scratch.', value: '$149' },
+    { num: 4, title: 'Substack Sequence Writer', desc: 'A plug-and-play system for writing your email sequences—welcome emails, re-engagement emails, paid upgrade pitches without starting from scratch.', value: '$149' },
   ]
 
   return (
@@ -323,10 +323,10 @@ function Instructors() {
             </div>
             <div className="border-t border-black/10 pt-4">
               <p className="font-sans text-[14px] text-black/70 leading-relaxed mb-4">
-                Former Wall Street trader at BlackRock turned Digital Writer & Digital Entrepreneur. Creator of Ship 30 for 30 — the fastest-growing cohort-based writing program on the internet.
+                Former Wall Street trader at BlackRock turned Digital Writer & Digital Entrepreneur. Creator of Ship 30 for 30—the fastest-growing cohort-based writing program on the internet.
               </p>
               <p className="font-sans text-[14px] text-black/70 leading-relaxed mb-4">
-                In January 2020, Dickie made a bet: write one short-form piece every day for 30 days. That challenge became a writing cohort that's helped 10,000+ people find their voice online — and a newsletter empire that followed.
+                In January 2020, Dickie made a bet: write one short-form piece every day for 30 days. That challenge became a writing cohort that's helped 10,000+ people find their voice online—and a newsletter empire that followed.
               </p>
               <p className="font-serif text-[14px] text-orange italic">
                 His frameworks power millions of posts across the internet.
@@ -457,7 +457,7 @@ function ReadyToBuild({ ctaUrl }: { ctaUrl: string }) {
           Ready to Build?
         </h2>
         <a href={ctaUrl} className="inline-block bg-orange text-white font-sans text-[15px] font-bold uppercase tracking-[0.08em] px-12 py-4 rounded-lg hover:bg-orange/90 transition mb-6">
-          Join the Bootcamp — $800 →
+          Join the Bootcamp—$800 →
         </a>
         <p className="font-sans text-[14px] text-white/50 mb-12 whitespace-pre-line">
           {'March 16 – March 27, 2026\nLimited seats\nLifetime access to all materials'}
@@ -482,14 +482,14 @@ function ReadyToBuild({ ctaUrl }: { ctaUrl: string }) {
 /* ─── Section 9: FAQ ─── */
 function FAQ() {
   const faqs = [
-    { q: "How much time do I need per week?", a: "Three 60-minute live sessions per week, plus 1–2 hours to implement between sessions. Intensive but doable — every deliverable is built during the session itself, so implementation time is minimal." },
-    { q: "What if I can't attend live?", a: "Every session is recorded and the replay goes up quickly after the live ends. You'll also get the full slide deck. Showing up live is where the real value is — real-time Q&A can't be replicated in a replay." },
-    { q: "Do I need writing experience?", a: "Not at all. The sprint starts from zero — how to position your newsletter, how to set it up technically, how to write your first content. No experience required." },
-    { q: "I already have a newsletter. Is this still for me?", a: "Yes — especially Sessions 2, 4, 5, and 6. If your newsletter isn't growing or converting to paid the way you want, the issue is almost always positioning, offer stack, or monetization architecture." },
+    { q: "How much time do I need per week?", a: "Three 60-minute live sessions per week, plus 1–2 hours to implement between sessions. Intensive but doable—every deliverable is built during the session itself, so implementation time is minimal." },
+    { q: "What if I can't attend live?", a: "Every session is recorded and the replay goes up quickly after the live ends. You'll also get the full slide deck. Showing up live is where the real value is—real-time Q&A can't be replicated in a replay." },
+    { q: "Do I need writing experience?", a: "Not at all. The sprint starts from zero—how to position your newsletter, how to set it up technically, how to write your first content. No experience required." },
+    { q: "I already have a newsletter. Is this still for me?", a: "Yes—especially Sessions 2, 4, 5, and 6. If your newsletter isn't growing or converting to paid the way you want, the issue is almost always positioning, offer stack, or monetization architecture." },
     { q: "How is this different from Category Newsletter Creator?", a: "Category Newsletter Creator is a self-paced digital product. The Substack Starter Sprint is a live cohort where you build everything in real time with Dickie and Nicolas. Different format, much higher accountability." },
-    { q: "How is this different from Ship 30 for 30?", a: "Ship 30 teaches you how to write and publish on social platforms. The sprint teaches you how to move that audience to email and monetize it. They're complementary — Ship 30 builds your voice, the sprint builds your newsletter business." },
-    { q: "Can't I just learn this for free?", a: "You can — and if you haven't started yet, the answer is clearly no. Free content gives you information, not accountability or a build environment. The sprint compresses 6+ months of trial and error into 14 days." },
-    { q: "Is there a VIP option?", a: "Yes. A small-group VIP upgrade is available at $2,500 — direct access and personalized strategy from Dickie and Nicolas. Limited spots. Email us to inquire." },
+    { q: "How is this different from Ship 30 for 30?", a: "Ship 30 teaches you how to write and publish on social platforms. The sprint teaches you how to move that audience to email and monetize it. They're complementary—Ship 30 builds your voice, the sprint builds your newsletter business." },
+    { q: "Can't I just learn this for free?", a: "You can—and if you haven't started yet, the answer is clearly no. Free content gives you information, not accountability or a build environment. The sprint compresses 6+ months of trial and error into 14 days." },
+    { q: "Is there a VIP option?", a: "Yes. A small-group VIP upgrade is available at $2,500—direct access and personalized strategy from Dickie and Nicolas. Limited spots. Email us to inquire." },
     { q: "How long do I have access?", a: "Lifetime. All replays, slide decks, templates, .Skills, and bonuses are yours to keep forever." },
   ]
 
