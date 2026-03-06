@@ -408,10 +408,10 @@ function Pricing({ ctaUrl }: { ctaUrl: string }) {
       <div className="max-w-page mx-auto text-center">
         <p className="font-sans text-[12px] font-bold text-orange uppercase tracking-[0.15em] mb-4">Join the Bootcamp</p>
         <h2 className="font-serif text-[clamp(30px,4vw,44px)] leading-[1.15] mb-4">
-          6 live sessions. Proven frameworks.<br />Everything you need to launch.
+          Proven Frameworks.<br />Everything You Need to Launch.
         </h2>
         <p className="font-sans text-[16px] text-black/70 mb-10">
-          Every <span className="underline decoration-orange">template</span>, <span className="underline decoration-orange">swipe file</span>, and <span className="underline decoration-orange">.Skill</span> included—built from newsletters<br />generating $1M+/yr in paid subscriptions.
+          Built from newsletters generating $1M+/yr in paid subscriptions.
         </p>
 
         {/* Value breakdown table */}
