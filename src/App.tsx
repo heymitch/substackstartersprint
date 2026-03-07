@@ -239,6 +239,8 @@ function Bonuses() {
     { num: 2, title: 'Design Secrets', desc: 'Cover art, logo placement, color palette, and the subtle visual choices that make a newsletter look established—even before it has thousands of subscribers.', value: '$149', img: 3 },
     { num: 3, title: 'Substack Notes Swipe File', desc: 'The exact Notes formats that drive follows, subscribers, and engagement. Stop staring at the blank Notes field. Steal what works.', value: '$99', img: 2 },
     { num: 4, title: 'Substack Sequence Writer', desc: 'A plug-and-play system for writing your email sequences—welcome emails, re-engagement emails, paid upgrade pitches without starting from scratch.', value: '$149' },
+    { num: 5, title: 'Opening Hook Prompt', desc: 'The exact prompt we use to generate strong opening hooks for emails and posts. Give it your topic and it produces multiple hook angles designed to stop readers and make them keep reading.', value: '$99' },
+    { num: 6, title: 'Landing Page Swipe File', desc: 'A collection of proven landing page sections—from headlines and offer stacks to CTAs and guarantee blocks—so you can see how high-converting pages are structured and model your own.', value: '$99' },
   ]
 
   return (
@@ -401,6 +403,8 @@ function Pricing({ ctaUrl }: { ctaUrl: string }) {
     { name: 'BONUS: Design Secrets', price: '$149' },
     { name: 'BONUS: Substack Notes Swipe File', price: '$99' },
     { name: 'BONUS: Substack Sequence Writer', price: '$99' },
+    { name: 'BONUS: Opening Hook Prompt', price: '$99' },
+    { name: 'BONUS: Landing Page Swipe File', price: '$99' },
   ]
 
   return (
