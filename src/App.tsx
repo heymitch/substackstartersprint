@@ -236,9 +236,11 @@ function Sessions() {
 function Bonuses() {
   const bonuses = [
     { num: 1, title: 'Big Substack FAQ File', desc: "Every question you'll have about Substack—answered. Built from hundreds of real student questions so you never waste time searching.", value: '$99' },
-    { num: 2, title: 'Design Secrets', desc: 'Cover art, logo placement, color palette, and the subtle visual choices that make a newsletter look established—even before it has thousands of subscribers.', value: '$149' },
-    { num: 3, title: 'Substack Notes Swipe File', desc: 'The exact Notes formats that drive follows, subscribers, and engagement. Stop staring at the blank Notes field. Steal what works.', value: '$99' },
+    { num: 2, title: 'Design Secrets', desc: 'Cover art, logo placement, color palette, and the subtle visual choices that make a newsletter look established—even before it has thousands of subscribers.', value: '$149', img: 3 },
+    { num: 3, title: 'Substack Notes Swipe File', desc: 'The exact Notes formats that drive follows, subscribers, and engagement. Stop staring at the blank Notes field. Steal what works.', value: '$99', img: 2 },
     { num: 4, title: 'Substack Sequence Writer', desc: 'A plug-and-play system for writing your email sequences—welcome emails, re-engagement emails, paid upgrade pitches without starting from scratch.', value: '$149' },
+    { num: 5, title: 'Opening Hook Prompt', desc: 'The exact prompt we use to generate strong opening hooks for emails and posts. Give it your topic and it produces multiple hook angles designed to stop readers and make them keep reading.', value: '$99' },
+    { num: 6, title: 'Landing Page Swipe File', desc: 'A collection of proven landing page sections—from headlines and offer stacks to CTAs and guarantee blocks—so you can see how high-converting pages are structured and model your own.', value: '$99' },
   ]
 
   return (
@@ -254,7 +256,7 @@ function Bonuses() {
           {bonuses.map((b) => (
             <div key={b.num} className="bg-cream/5 border border-white/10 rounded-lg p-6">
               <div className="flex items-center gap-4 mb-4">
-                <img src={`/images/bonus-${b.num}.png`} alt={b.title} className="w-32 h-40 object-contain flex-shrink-0" />
+                <img src={`/images/bonus-${b.img ?? b.num}.png`} alt={b.title} className="w-32 h-40 object-contain flex-shrink-0" />
                 <div>
                   <span className="font-sans text-[11px] font-bold text-orange uppercase tracking-wider">Bonus #{b.num}</span>
                   <h3 className="font-serif text-[20px] font-bold text-cream">{b.title}</h3>
@@ -401,6 +403,8 @@ function Pricing({ ctaUrl }: { ctaUrl: string }) {
     { name: 'BONUS: Design Secrets', price: '$149' },
     { name: 'BONUS: Substack Notes Swipe File', price: '$99' },
     { name: 'BONUS: Substack Sequence Writer', price: '$99' },
+    { name: 'BONUS: Opening Hook Prompt', price: '$99' },
+    { name: 'BONUS: Landing Page Swipe File', price: '$99' },
   ]
 
   return (
@@ -424,7 +428,7 @@ function Pricing({ ctaUrl }: { ctaUrl: string }) {
           ))}
           <div className="flex justify-between items-center pt-3">
             <span className="font-sans text-[13px] font-bold">Total Value</span>
-            <span className="font-serif text-[24px] font-bold">$1,845</span>
+            <span className="font-serif text-[24px] font-bold">$2,043</span>
           </div>
         </div>
 
