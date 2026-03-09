@@ -100,7 +100,7 @@ function Hero() {
             Live, 2-week bootcamp starting Monday, March 16th
           </p>
 
-          <a href="https://substackstartersprint.com/" className="inline-block bg-black text-white font-serif text-[14px] font-normal uppercase tracking-[0.1em] px-10 py-4 hover:bg-black/85 transition">
+          <a href="https://ship.samcart.com/products/substack-starter-sprint" className="inline-block bg-black text-white font-serif text-[14px] font-normal uppercase tracking-[0.1em] px-10 py-4 hover:bg-black/85 transition">
             Join Substack Starter Sprint
           </a>
 
