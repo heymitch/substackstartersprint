@@ -55,7 +55,7 @@ function CountdownTimer({ targetDate }: { targetDate: Date }) {
   ]
 
   return (
-    <div className="flex gap-3 mt-4">
+    <div className="flex justify-center gap-3 mt-4">
       {units.map((u) => (
         <div key={u.label} className="flex flex-col items-center">
           <span className="font-serif text-[22px] font-bold leading-none bg-black text-white rounded px-2.5 py-1.5 min-w-[44px] text-center tabular-nums">
@@ -320,7 +320,7 @@ function Bonuses() {
         </div>
 
         <div className="mt-12 text-center">
-          <a href="https://ship.samcart.com/products/substack-starter-sprint" className="inline-block bg-black text-white font-serif text-[14px] font-normal uppercase tracking-[0.1em] px-10 py-4 hover:bg-black/85 transition">
+          <a href="https://ship.samcart.com/products/substack-starter-sprint" className="inline-block bg-orange text-white font-sans text-[15px] font-bold uppercase tracking-[0.08em] px-16 py-4 rounded-lg hover:bg-orange/90 transition">
             Join Substack Starter Sprint
           </a>
           <p className="font-sans text-[11px] text-white/50 uppercase tracking-wider mt-4 mb-1">Cart closes in</p>
