@@ -394,7 +394,7 @@ function NewslettersProof() {
 /* ─── Section 8: Pricing ─── */
 function Pricing({ ctaUrl }: { ctaUrl: string }) {
   const valueItems = [
-    { name: '6 Live Sessions with Dickie Bush & Nicolas Cole', price: '$800' },
+    { name: '6 Live Sessions with Dickie Bush & Nicolas Cole', price: '$4,200' },
     { name: 'Session Replays + Slide Decks', price: '$200' },
     { name: 'Substack Templates Pack', price: '$99' },
     { name: 'Newsletter Writing .Skill', price: '$150' },
