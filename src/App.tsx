@@ -500,6 +500,7 @@ function Pricing({ ctaUrl }: { ctaUrl: string }) {
           </a>
         </div>
 
+        <p className="font-sans text-[12px] font-bold text-black/50 uppercase tracking-wider mt-6 mb-1">Enrollment ends in</p>
         <CountdownTimer targetDate={CART_CLOSE_DATE} centered variant="orange" />
       </div>
     </section>
@@ -534,7 +535,12 @@ function ReadyToBuild({ ctaUrl }: { ctaUrl: string }) {
             <a href={ctaUrl} className="inline-block bg-orange text-white font-sans text-[15px] font-bold uppercase tracking-[0.08em] px-12 py-4 rounded-lg hover:bg-orange/90 transition mb-4">
               Join the Bootcamp—$800 →
             </a>
-            <CountdownTimer targetDate={CART_CLOSE_DATE} centered variant="orange" />
+            <p className="font-sans text-[14px] text-white/50 leading-relaxed mt-4">
+              Launch, market & monetize a category-defining newsletter on Substack.
+            </p>
+            <p className="font-sans text-[14px] text-white/50 leading-relaxed mt-2">
+              Live, 2-week bootcamp starting Monday, March 16th
+            </p>
           </div>
         </div>
       </div>
