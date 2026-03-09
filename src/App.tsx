@@ -27,7 +27,7 @@ function FadeIn({ children, className = '', delay = 0 }: { children: React.React
 }
 
 /* ─── Countdown Timer ─── */
-function CountdownTimer({ targetDate }: { targetDate: Date }) {
+function CountdownTimer({ targetDate, centered, variant }: { targetDate: Date; centered?: boolean; variant?: 'orange' }) {
   const [timeLeft, setTimeLeft] = useState({ days: 0, hours: 0, minutes: 0, seconds: 0 })
 
   useEffect(() => {
@@ -55,13 +55,13 @@ function CountdownTimer({ targetDate }: { targetDate: Date }) {
   ]
 
   return (
-    <div className="flex gap-3 mt-4">
+    <div className={`flex gap-3 mt-4${centered ? ' justify-center' : ''}`}>
       {units.map((u) => (
         <div key={u.label} className="flex flex-col items-center">
-          <span className="font-serif text-[22px] font-bold leading-none bg-black text-white rounded px-2.5 py-1.5 min-w-[44px] text-center tabular-nums">
+          <span className={`font-serif text-[22px] font-bold leading-none text-white rounded px-2.5 py-1.5 min-w-[44px] text-center tabular-nums ${variant === 'orange' ? 'bg-orange' : 'bg-black'}`}>
             {String(u.value).padStart(2, '0')}
           </span>
-          <span className="font-sans text-[10px] text-black/50 uppercase tracking-wider mt-1">{u.label}</span>
+          <span className={`font-sans text-[10px] uppercase tracking-wider mt-1 ${variant === 'orange' ? 'text-white/50' : 'text-black/50'}`}>{u.label}</span>
         </div>
       ))}
     </div>
@@ -270,6 +270,14 @@ function Sessions() {
             <br />You leave with <span className="text-orange">a system</span>.
           </p>
         </div>
+
+        <div className="mt-12 text-center">
+          <a href="https://ship.samcart.com/products/substack-starter-sprint" className="inline-block bg-black text-white font-serif text-[14px] font-normal uppercase tracking-[0.1em] px-10 py-4 hover:bg-black/85 transition">
+            Join Substack Starter Sprint
+          </a>
+          <p className="font-sans text-[11px] text-black/50 uppercase tracking-wider mt-4 mb-1">Cart closes in</p>
+          <CountdownTimer targetDate={CART_CLOSE_DATE} centered />
+        </div>
       </div>
     </section>
   )
@@ -309,6 +317,14 @@ function Bonuses() {
               <p className="font-serif text-[18px] font-bold text-cream">{b.value} value</p>
             </div>
           ))}
+        </div>
+
+        <div className="mt-12 text-center">
+          <a href="https://ship.samcart.com/products/substack-starter-sprint" className="inline-block bg-orange text-white font-sans text-[15px] font-bold uppercase tracking-[0.08em] px-16 py-4 rounded-lg hover:bg-orange/90 transition">
+            Join Substack Starter Sprint
+          </a>
+          <p className="font-sans text-[11px] text-white/50 uppercase tracking-wider mt-4 mb-1">Cart closes in</p>
+          <CountdownTimer targetDate={CART_CLOSE_DATE} centered variant="orange" />
         </div>
       </div>
     </section>
