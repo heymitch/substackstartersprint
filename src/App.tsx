@@ -428,7 +428,7 @@ function Pricing({ ctaUrl }: { ctaUrl: string }) {
           ))}
           <div className="flex justify-between items-center pt-3">
             <span className="font-sans text-[13px] font-bold">Total Value</span>
-            <span className="font-serif text-[24px] font-bold">$2,043</span>
+            <span className="font-serif text-[24px] font-bold">$5,443</span>
           </div>
         </div>
 
