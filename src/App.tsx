@@ -270,6 +270,14 @@ function Sessions() {
             <br />You leave with <span className="text-orange">a system</span>.
           </p>
         </div>
+
+        <div className="mt-12 text-center">
+          <a href="https://ship.samcart.com/products/substack-starter-sprint" className="inline-block bg-black text-white font-serif text-[14px] font-normal uppercase tracking-[0.1em] px-10 py-4 hover:bg-black/85 transition">
+            Join Substack Starter Sprint
+          </a>
+          <p className="font-sans text-[11px] text-black/50 uppercase tracking-wider mt-4 mb-1">Cart closes in</p>
+          <CountdownTimer targetDate={CART_CLOSE_DATE} />
+        </div>
       </div>
     </section>
   )
@@ -309,6 +317,14 @@ function Bonuses() {
               <p className="font-serif text-[18px] font-bold text-cream">{b.value} value</p>
             </div>
           ))}
+        </div>
+
+        <div className="mt-12 text-center">
+          <a href="https://ship.samcart.com/products/substack-starter-sprint" className="inline-block bg-black text-white font-serif text-[14px] font-normal uppercase tracking-[0.1em] px-10 py-4 hover:bg-black/85 transition">
+            Join Substack Starter Sprint
+          </a>
+          <p className="font-sans text-[11px] text-white/50 uppercase tracking-wider mt-4 mb-1">Cart closes in</p>
+          <CountdownTimer targetDate={CART_CLOSE_DATE} />
         </div>
       </div>
     </section>
