@@ -500,11 +500,8 @@ function Pricing({ ctaUrl }: { ctaUrl: string }) {
           </a>
         </div>
 
-        <div className="max-w-[400px] mx-auto">
-          <p className="font-sans text-[12px] text-black/40 mt-4">
-            Cart opens March 9 · Cart closes March 15 ·<br />Kickoff Monday March 16 · Limited seats
-          </p>
-        </div>
+        <p className="font-sans text-[12px] font-bold text-black/50 uppercase tracking-wider mt-6 mb-1">Enrollment ends in</p>
+        <CountdownTimer targetDate={CART_CLOSE_DATE} centered variant="orange" />
       </div>
     </section>
   )
@@ -535,13 +532,11 @@ function ReadyToBuild({ ctaUrl }: { ctaUrl: string }) {
             <h2 className="font-serif text-[clamp(36px,5vw,48px)] text-cream leading-[1.1] mb-6">
               Ready to Build?
             </h2>
-            <a href={ctaUrl} className="inline-block bg-orange text-white font-sans text-[15px] font-bold uppercase tracking-[0.08em] px-12 py-4 rounded-lg hover:bg-orange/90 transition mb-6">
+            <a href={ctaUrl} className="inline-block bg-orange text-white font-sans text-[15px] font-bold uppercase tracking-[0.08em] px-12 py-4 rounded-lg hover:bg-orange/90 transition mb-4">
               Join the Bootcamp—$800 →
             </a>
-            <p className="font-sans text-[13px] text-white/40 leading-relaxed">
-              March 16 – March 27, 2026<br />
-              Limited seats<br />
-              Lifetime access to all materials
+            <p className="font-sans text-[14px] text-white/50 leading-relaxed mt-4">
+              Starting Monday, March 16th
             </p>
           </div>
         </div>
