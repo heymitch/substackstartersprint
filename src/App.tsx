@@ -26,6 +26,51 @@ function FadeIn({ children, className = '', delay = 0 }: { children: React.React
   )
 }
 
+/* ─── Countdown Timer ─── */
+function CountdownTimer({ targetDate }: { targetDate: Date }) {
+  const [timeLeft, setTimeLeft] = useState({ days: 0, hours: 0, minutes: 0, seconds: 0 })
+
+  useEffect(() => {
+    function calc() {
+      const now = new Date()
+      const diff = targetDate.getTime() - now.getTime()
+      if (diff <= 0) return { days: 0, hours: 0, minutes: 0, seconds: 0 }
+      return {
+        days: Math.floor(diff / (1000 * 60 * 60 * 24)),
+        hours: Math.floor((diff / (1000 * 60 * 60)) % 24),
+        minutes: Math.floor((diff / (1000 * 60)) % 60),
+        seconds: Math.floor((diff / 1000) % 60),
+      }
+    }
+    setTimeLeft(calc())
+    const id = setInterval(() => setTimeLeft(calc()), 1000)
+    return () => clearInterval(id)
+  }, [targetDate])
+
+  const units = [
+    { label: 'Days', value: timeLeft.days },
+    { label: 'Hrs', value: timeLeft.hours },
+    { label: 'Min', value: timeLeft.minutes },
+    { label: 'Sec', value: timeLeft.seconds },
+  ]
+
+  return (
+    <div className="flex gap-3 mt-4">
+      {units.map((u) => (
+        <div key={u.label} className="flex flex-col items-center">
+          <span className="font-serif text-[22px] font-bold leading-none bg-black text-white rounded px-2.5 py-1.5 min-w-[44px] text-center tabular-nums">
+            {String(u.value).padStart(2, '0')}
+          </span>
+          <span className="font-sans text-[10px] text-black/50 uppercase tracking-wider mt-1">{u.label}</span>
+        </div>
+      ))}
+    </div>
+  )
+}
+
+// March 15, 2026 11:59 PM ET (UTC-4 for EDT)
+const CART_CLOSE_DATE = new Date('2026-03-16T03:59:00Z')
+
 /* ─── Section 1: Hero ─── */
 function Hero() {
   return (
@@ -49,20 +94,18 @@ function Hero() {
             <strong>Newsletter On Substack In 14 Days</strong>
           </h2>
           <p className="font-sans text-[15px] text-black/70 leading-relaxed mb-2">
-            6 live sessions. Built together—with the founders of the internet's most successful writing businesses.
+            Own your niche. Turn readers into paying subscribers. And build a Substack that generates recurring revenue on autopilot.
           </p>
           <p className="font-sans text-[15px] text-black/70 leading-relaxed mb-8">
-            This isn't self-paced content you buy and forget.
-            You show up, you do the work, you leave with a newsletter—and the replays forever.
+            Live, 2-week bootcamp starting Monday, March 16th
           </p>
 
-          <a href="#how-it-works" className="inline-block bg-black text-white font-serif text-[14px] font-normal uppercase tracking-[0.1em] px-10 py-4 hover:bg-black/85 transition">
-            How It Works
+          <a href="https://substackstartersprint.com/" className="inline-block bg-black text-white font-serif text-[14px] font-normal uppercase tracking-[0.1em] px-10 py-4 hover:bg-black/85 transition">
+            Join Substack Starter Sprint
           </a>
 
-          <p className="font-sans text-[12px] text-black/50 mt-4">
-            Cart opens <strong className="text-black">March 9</strong> · Cart closes <strong className="text-black">March 15</strong> · <strong className="text-black">Limited seats</strong>
-          </p>
+          <p className="font-sans text-[11px] text-black/50 uppercase tracking-wider mt-4 mb-1">Cart closes in</p>
+          <CountdownTimer targetDate={CART_CLOSE_DATE} />
         </div>
 
         {/* Right column—headshots, stretches to match left column height */}
