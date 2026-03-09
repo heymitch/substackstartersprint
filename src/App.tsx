@@ -536,10 +536,7 @@ function ReadyToBuild({ ctaUrl }: { ctaUrl: string }) {
               Join the Bootcamp—$800 →
             </a>
             <p className="font-sans text-[14px] text-white/50 leading-relaxed mt-4">
-              Launch, market & monetize a category-defining newsletter on Substack.
-            </p>
-            <p className="font-sans text-[14px] text-white/50 leading-relaxed mt-2">
-              Live, 2-week bootcamp starting Monday, March 16th
+              Starting Monday, March 16th
             </p>
           </div>
         </div>
