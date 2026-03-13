@@ -450,6 +450,127 @@ function NewslettersProof() {
   )
 }
 
+/* ─── Section 7b: Session Calendar ─── */
+function SessionCalendar() {
+  const sessions = [
+    { date: '2026-03-16', label: 'Session #1: Category Newsletter Positioning' },
+    { date: '2026-03-18', label: 'Session #2: Newsletter Offer Stack Generator' },
+    { date: '2026-03-20', label: 'Session #3: Substack Tech Stack' },
+    { date: '2026-03-23', label: 'Session #4: Newsletter Conversion Secrets' },
+    { date: '2026-03-25', label: 'Session #5: Notes Traffic Strategy' },
+    { date: '2026-03-30', label: 'Session #6: Substack Monetization Mastery' },
+  ]
+
+  const sessionDates = new Set(sessions.map(s => s.date))
+
+  // Week rows: Mon Mar 16–Sun Mar 22, Mon Mar 23–Sun Mar 29, Mon Mar 30 (partial)
+  const weeks: { label: string; days: { day: number; date: string }[] }[] = [
+    {
+      label: 'WEEK 1',
+      days: Array.from({ length: 7 }, (_, i) => {
+        const d = 16 + i
+        return { day: d, date: `2026-03-${String(d).padStart(2, '0')}` }
+      }),
+    },
+    {
+      label: 'WEEK 2',
+      days: Array.from({ length: 7 }, (_, i) => {
+        const d = 23 + i
+        return { day: d, date: `2026-03-${String(d).padStart(2, '0')}` }
+      }),
+    },
+    {
+      label: 'WEEK 3',
+      days: [
+        { day: 30, date: '2026-03-30' },
+        { day: 31, date: '2026-03-31' },
+      ],
+    },
+  ]
+
+  const dayLabels = ['M', 'T', 'W', 'T', 'F', 'S', 'S']
+
+  return (
+    <section className="bg-dark-deep py-20 px-6">
+      <div className="max-w-page mx-auto">
+        <p className="font-sans text-[12px] font-bold text-orange uppercase tracking-[0.15em] mb-4 text-center">Live Sessions</p>
+        <h2 className="font-display text-[clamp(28px,3.5vw,40px)] leading-[1.15] mb-3 text-center text-white font-bold">
+          Substack Starter Sprint Schedule
+        </h2>
+        <p className="font-sans text-[15px] text-white/60 mb-2 text-center">
+          All sessions held at <span className="text-yellow font-bold">3:00 PM Eastern Time</span>
+        </p>
+        <p className="font-sans text-[13px] text-white/40 mb-10 text-center">
+          March 2026
+        </p>
+
+        {/* Calendar grid */}
+        <div className="max-w-[640px] mx-auto">
+          {/* Day-of-week headers */}
+          <div className="grid grid-cols-[80px_repeat(7,1fr)] gap-1 mb-1">
+            <div />
+            {dayLabels.map((d, i) => (
+              <div key={i} className="font-sans text-[11px] text-white/40 uppercase tracking-wider text-center py-2">{d}</div>
+            ))}
+          </div>
+
+          {/* Week rows */}
+          {weeks.map((week) => (
+            <div key={week.label} className="grid grid-cols-[80px_repeat(7,1fr)] gap-1 mb-1">
+              <div className="font-sans text-[11px] text-white/50 uppercase tracking-wider flex items-center">{week.label}</div>
+              {week.days.map((d) => {
+                const isSession = sessionDates.has(d.date)
+                return (
+                  <div
+                    key={d.date}
+                    className={`relative aspect-square flex flex-col items-center justify-center rounded-md transition-all ${
+                      isSession
+                        ? 'bg-dark border-2 border-orange text-white'
+                        : 'bg-dark-deep text-white/30'
+                    }`}
+                  >
+                    <span className={`font-sans text-[16px] font-bold ${isSession ? 'text-white' : ''}`}>{d.day}</span>
+                    {isSession && <span className="w-1.5 h-1.5 rounded-full bg-orange mt-1" />}
+                  </div>
+                )
+              })}
+              {/* Pad remaining cells for partial weeks */}
+              {Array.from({ length: 7 - week.days.length }, (_, i) => (
+                <div key={`empty-${i}`} />
+              ))}
+            </div>
+          ))}
+        </div>
+
+        {/* Session details by week */}
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-12 max-w-[640px] mx-auto">
+          <div>
+            <h4 className="font-sans text-[12px] text-yellow uppercase tracking-wider font-bold mb-4">Week 1 — March</h4>
+            <div className="space-y-3">
+              <div><p className="font-sans text-[13px] text-white/50 font-bold">Mon 16</p><p className="font-sans text-[13px] text-white/80">Session #1: Category Newsletter Positioning</p></div>
+              <div><p className="font-sans text-[13px] text-white/50 font-bold">Wed 18</p><p className="font-sans text-[13px] text-white/80">Session #2: Newsletter Offer Stack Generator</p></div>
+              <div><p className="font-sans text-[13px] text-white/50 font-bold">Fri 20</p><p className="font-sans text-[13px] text-white/80">Session #3: Substack Tech Stack</p></div>
+            </div>
+          </div>
+          <div>
+            <h4 className="font-sans text-[12px] text-yellow uppercase tracking-wider font-bold mb-4">Week 2 — March</h4>
+            <div className="space-y-3">
+              <div><p className="font-sans text-[13px] text-white/50 font-bold">Mon 23</p><p className="font-sans text-[13px] text-white/80">Session #4: Newsletter Conversion Secrets</p></div>
+              <div><p className="font-sans text-[13px] text-white/50 font-bold">Wed 25</p><p className="font-sans text-[13px] text-white/80">Session #5: Notes Traffic Strategy</p></div>
+            </div>
+          </div>
+          <div>
+            <h4 className="font-sans text-[12px] text-yellow uppercase tracking-wider font-bold mb-4">Week 3 — March</h4>
+            <div className="space-y-3">
+              <div><p className="font-sans text-[13px] text-white/50 font-bold">Mon 30</p><p className="font-sans text-[13px] text-white/80">Session #6: Substack Monetization Mastery</p></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  )
+}
+
 /* ─── Section 8: Pricing ─── */
 function Pricing({ ctaUrl }: { ctaUrl: string }) {
   const valueItems = [
@@ -626,6 +747,7 @@ export default function App({ withFbPixel = false, ctaUrl = DEFAULT_CTA_URL }: {
       <FadeIn><Bonuses /></FadeIn>
       <FadeIn><Instructors /></FadeIn>
       <FadeIn><NewslettersProof /></FadeIn>
+      <FadeIn><SessionCalendar /></FadeIn>
       <FadeIn><Pricing ctaUrl={ctaUrl} /></FadeIn>
       <FadeIn><ReadyToBuild ctaUrl={ctaUrl} /></FadeIn>
       <FadeIn><FAQ /></FadeIn>
